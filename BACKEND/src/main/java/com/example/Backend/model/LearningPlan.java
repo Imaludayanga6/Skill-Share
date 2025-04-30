@@ -25,7 +25,7 @@ public class LearningPlan {
     public LearningPlan() {
     }
 
-    
+
     public LearningPlan(String id, String userId, String userName, String title, String description, String topics,
             String resources, Date createdAt, Date updatedAt, List<Like> likes, List<Comment> comments) {
         this.id = id;
