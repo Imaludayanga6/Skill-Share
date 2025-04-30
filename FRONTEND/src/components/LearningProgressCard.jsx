@@ -66,6 +66,7 @@ const LearningProgressCard = ({
     color: "bg-gray-100 text-gray-800",
   };
 
+  
   return (
     <div className="bg-white rounded-2xl shadow-md border border-teal-100 mb-6 overflow-hidden">
       {/* Progress Header */}
