@@ -95,6 +95,7 @@ const LearningPlanPage = () => {
     }
   };
 
+  
   const handleLike = async (planId) => {
     if (!currentUser) {
       toast.error("You must be logged in to like this plan");
