@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 const EditLearningPlanModal = ({ plan, onClose, onPlanUpdated, token }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  
   const {
     register,
     handleSubmit,
