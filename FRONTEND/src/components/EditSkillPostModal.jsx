@@ -50,7 +50,7 @@ const EditPostModal = ({ post, onClose, onPostUpdated, token }) => {
       video.src = URL.createObjectURL(file);
     });
   };
-
+  //handle file change
   const handleFileChange = async (e) => {
     const files = Array.from(e.target.files);
 
