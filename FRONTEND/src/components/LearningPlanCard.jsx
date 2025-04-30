@@ -45,6 +45,7 @@ const LearningPlanCard = ({
     }
   };
 
+  
   const topicTags =
     plan.topics
       ?.split(",")
