@@ -70,11 +70,11 @@ export default function RegisterPage() {
           toast.error(error.response.data);
         } else {
           console.log(error);
-          toast.error("Something went wrong");
+          toast.error("Something Went wrong");
         }
       }
     } catch (error) {
-      console.error("Registration failed:", error);
+      console.error("Registration Failed:", error);
     }
   };
 
