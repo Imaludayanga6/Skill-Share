@@ -152,8 +152,8 @@ const ProfilePage = () => {
 
   const handleFollowToggle = async () => {
     if (!currentUser) {
-      toast.error("You must be logged in to follow users");
-      navigate("/login");
+      toast.error("You must be Logged in to follow Users");
+      navigate("/Login");
       return;
     }
 
@@ -185,7 +185,7 @@ const ProfilePage = () => {
   const handleProfileUpdated = (updatedProfile) => {
     setProfileUser(updatedProfile);
     setShowEditProfile(false);
-    toast.success("Profile updated successfully");
+    toast.success("Profile Updated Successfully");
   };
 
   // Comment handlers for posts
