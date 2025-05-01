@@ -41,7 +41,7 @@ public class NotificationController {
             return ResponseEntity.ok(unreadNotifications);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Error fetching unread notifications: " + e.getMessage());
+                    .body("Error Fetching Unread Notifications: " + e.getMessage());
         }
     }
 
@@ -52,7 +52,7 @@ public class NotificationController {
             return ResponseEntity.noContent().build();
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Error marking notification as read: " + e.getMessage());
+                    .body("Error Marking Notification as Read: " + e.getMessage());
         }
     }
 }
