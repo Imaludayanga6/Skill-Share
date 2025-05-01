@@ -31,6 +31,7 @@ const Header = () => {
       setActiveTab("feed");
     }
 
+    
     setUnreadCount(3);
     setNotifications([
       {
