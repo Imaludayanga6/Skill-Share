@@ -151,7 +151,7 @@ const EditLearningProgressModal = ({
             {/* Progress Type */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Progress Type
+                Progress type
               </label>
               <select
                 value={selectedTemplate}

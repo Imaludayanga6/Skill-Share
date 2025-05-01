@@ -45,6 +45,7 @@ const LearningPlanCard = ({
     }
   };
 
+  
   const topicTags =
     plan.topics
       ?.split(",")
@@ -80,6 +81,7 @@ const LearningPlanCard = ({
             </p>
           </div>
         </div>
+
 
         {isOwner && (
           <div className="flex space-x-1">

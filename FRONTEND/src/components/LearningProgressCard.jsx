@@ -66,6 +66,7 @@ const LearningProgressCard = ({
     color: "bg-gray-100 text-gray-800",
   };
 
+  
   return (
     <div className="bg-white rounded-2xl shadow-md border border-teal-100 mb-6 overflow-hidden">
       {/* Progress Header */}
@@ -229,7 +230,7 @@ const LearningProgressCard = ({
                 />
               ))
             ) : (
-              <p className="text-center text-gray-500 py-3">No comments yet</p>
+              <p className="text-center text-gray-500 py-3">No Comments yet</p>
             )}
           </div>
         </div>
