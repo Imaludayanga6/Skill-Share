@@ -29,6 +29,7 @@ const SkillSharingFeed = () => {
     fetchPosts();
   }, []);
 
+
   const fetchPosts = async () => {
     setLoading(true);
     try {
@@ -55,7 +56,7 @@ const SkillSharingFeed = () => {
     openModal({
       title: "Delete Post",
       message:
-        "Are you sure you want to delete this post? This action cannot be undone.",
+        "Are you sure you want to delete this post? This action cannot be Undone.",
       confirmText: "Delete",
       cancelText: "Cancel",
       type: "danger",
