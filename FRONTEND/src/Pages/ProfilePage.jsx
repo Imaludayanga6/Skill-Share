@@ -169,7 +169,7 @@ const ProfilePage = () => {
       // Toggle following state
       setIsFollowing(!isFollowing);
 
-      // Update followers count in profile data
+      // Update followers count in profile Data
       setProfileUser((prev) => ({
         ...prev,
         followedUsers: isFollowing
