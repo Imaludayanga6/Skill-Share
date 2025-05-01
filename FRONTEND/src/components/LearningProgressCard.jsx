@@ -230,7 +230,7 @@ const LearningProgressCard = ({
                 />
               ))
             ) : (
-              <p className="text-center text-gray-500 py-3">No comments yet</p>
+              <p className="text-center text-gray-500 py-3">No Comments yet</p>
             )}
           </div>
         </div>
