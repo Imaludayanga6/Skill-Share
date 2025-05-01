@@ -16,7 +16,7 @@ import {
   addComment,
 } from "../api/learningProgressAPI";
 
-// Status options
+// STATUS options
 const STATUS_OPTIONS = [
   {
     id: "not_started",

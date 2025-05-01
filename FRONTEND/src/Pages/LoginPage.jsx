@@ -89,7 +89,7 @@ export default function LoginPage() {
             Welcome Back
           </h1>
           <p className="text-gray-600 mb-8">
-            Don't have an account?{" "}
+            Don't have an account ?{" "}
             <Link
               to="/register"
               className="text-teal-600 hover:text-teal-800 font-medium"
@@ -170,7 +170,7 @@ export default function LoginPage() {
                 to="/forgot-password"
                 className="text-sm text-teal-600 hover:text-teal-800 font-medium"
               >
-                Forgot password?
+                Forgot password ?
               </Link>
             </div>
 
