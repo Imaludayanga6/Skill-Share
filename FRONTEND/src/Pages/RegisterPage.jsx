@@ -31,7 +31,7 @@ export default function RegisterPage() {
 
   const onSubmit = async (data) => {
     try {
-      // Check terms agreement
+      // Checks terms agreement
       if (!data.agreeToTerms) {
         setError("agreeToTerms", {
           type: "manual",
@@ -122,7 +122,7 @@ export default function RegisterPage() {
             Create Your Account
           </h1>
           <p className="text-gray-600 mb-8">
-            Already have an account?{" "}
+            Already have an account ?{" "}
             <Link
               to="/login"
               className="text-teal-600 hover:text-teal-800 font-medium"
