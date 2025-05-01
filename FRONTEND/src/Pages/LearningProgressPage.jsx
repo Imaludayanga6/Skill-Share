@@ -16,7 +16,6 @@ import {
   addComment,
 } from "../api/learningProgressAPI";
 
-
 // Status options
 const STATUS_OPTIONS = [
   {
