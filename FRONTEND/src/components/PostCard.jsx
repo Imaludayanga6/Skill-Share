@@ -26,7 +26,7 @@ const PostCard = ({
 
   return (
     <div className="bg-white rounded-2xl shadow-md border border-teal-100 mb-6 overflow-hidden">
-      {/* Post Header */}
+      {/* Post Header */} {/* */}
       <div className="p-4 flex items-center space-x-3 border-b border-teal-100">
         <div className="h-10 w-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white overflow-hidden">
           <UserAvatar
@@ -43,7 +43,6 @@ const PostCard = ({
           </p>
         </div>
       </div>
-
       {/* Post Content */}
       <div className="p-4">
         <p className="text-gray-800 mb-4">{post.description}</p>
@@ -101,7 +100,6 @@ const PostCard = ({
           </button>
         </div>
       </div>
-
       {/* Comments Section */}
       {showComments && (
         <div className="p-4 bg-gray-50">
