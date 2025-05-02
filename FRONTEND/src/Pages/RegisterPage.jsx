@@ -33,9 +33,9 @@ export default function RegisterPage() {
     try {
       // Check terms agreement
       if (!data.agreeToTerms) {
-        setError("agreeToTerms", {
+        setError("AgreeToTerms", {
           type: "manual",
-          message: "You must agree to the terms and conditions",
+          message: "You must agree to the terms and Conditions",
         });
         return;
       }
@@ -122,7 +122,7 @@ export default function RegisterPage() {
             Create Your Account
           </h1>
           <p className="text-gray-600 mb-8">
-            Already have an account?{" "}
+            Already have an Account?{" "}
             <Link
               to="/login"
               className="text-teal-600 hover:text-teal-800 font-medium"
@@ -138,7 +138,7 @@ export default function RegisterPage() {
                   htmlFor="firstName"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  First name
+                  First Name
                 </label>
                 <input
                   id="firstName"
