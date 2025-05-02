@@ -166,7 +166,7 @@ export default function RegisterPage() {
                   htmlFor="lastName"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Last name
+                  Last Name
                 </label>
                 <input
                   id="lastName"
