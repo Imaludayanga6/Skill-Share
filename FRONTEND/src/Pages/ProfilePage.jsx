@@ -177,7 +177,7 @@ const ProfilePage = () => {
           : [...(prev.followedUsers || []), currentUser?.id],
       }));
     } catch (error) {
-      console.error("Error following/unfollowing user:", error);
+      console.error("Error following/unfollow user:", error);
       toast.error("Failed to update follow status");
     }
   };
@@ -582,7 +582,7 @@ const ProfilePage = () => {
       );
 
       // Show feedback toast
-      toast.success(isLiked ? "Progress unliked" : "Progress liked");
+      toast.success(isLiked ? "Progress unlike" : "Progress liked");
     } catch (error) {
       console.error("Error toggling progress like:", error);
       toast.error("Failed to process like");
@@ -687,7 +687,7 @@ const ProfilePage = () => {
       );
 
       // Show feedback toast
-      toast.success(isLiked ? "Plan unliked" : "Plan liked");
+      toast.success(isLiked ? "Plan unlike" : "Plan liked");
     } catch (error) {
       console.error("Error toggling plan like:", error);
       toast.error("Failed to process like");

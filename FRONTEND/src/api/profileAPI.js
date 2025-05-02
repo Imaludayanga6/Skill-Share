@@ -77,7 +77,7 @@ export const unfollowUser = async (userId, token) => {
     );
     return response.data;
   } catch (error) {
-    console.error("Error unfollowing user:", error);
+    console.error("Error unfollow user:", error);
     throw error;
   }
 };
