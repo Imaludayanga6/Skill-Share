@@ -1,6 +1,10 @@
 package com.example.Backend.service;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,7 +80,7 @@ public class PostService {
         comment.setUpdatedAt(new Date());
         post.getComments().add(comment);
         post = postRepository.save(post);
-        //trigger notification if commenter is not the post owner
+        //trigger notification if commenter is not the post owners
         if (!post.getUserId().equals(comment.getUserId())) {
             notificationService.createCommentNotification(postId, post.getUserId(), comment.getUserId(),
                     comment.getContent());
