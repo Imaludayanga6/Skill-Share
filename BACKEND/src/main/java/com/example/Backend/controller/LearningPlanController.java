@@ -76,7 +76,7 @@ public class LearningPlanController {
         return new ResponseEntity<>(updated, HttpStatus.CREATED);
     }
 
-    // Update a comment
+    // Update a comments
     @PutMapping("/{planId}/comments/{commentId}")
     public ResponseEntity<LearningPlan> updateComment(
             @PathVariable String planId,

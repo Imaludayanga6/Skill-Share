@@ -260,7 +260,7 @@ const ProfilePage = () => {
   // Progress comment handlers
   const handleAddProgressComment = async (progressId, commentData) => {
     if (!currentUser) {
-      toast.error("You must be logged in to comment");
+      toast.error("You must be logged in to comments");
       navigate("/login");
       return false;
     }

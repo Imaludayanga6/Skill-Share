@@ -166,7 +166,7 @@ const LearningProgressPage = () => {
       setSelectedTemplate(TEMPLATES[0].id);
       setSelectedStatus(STATUS_OPTIONS[0].id);
     } catch (error) {
-      console.error("Error creating learning progress:", error);
+      console.error("Error Creating learning progress:", error);
       toast.error("Failed to share progress");
     } finally {
       setIsSubmitting(false);
