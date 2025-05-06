@@ -114,13 +114,13 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md border-b border-teal-100">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md border-b border-orange-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Mobile Menu */}
           <div className="flex items-center">
             <button
-              className="mr-2 sm:hidden text-teal-600"
+              className="mr-2 sm:hidden text-orange-600"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -129,7 +129,7 @@ const Header = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400 cursor-pointer"
+              className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-orange-400 cursor-pointer"
               onClick={() => navigate("/")}
             >
               SkillSYNC
@@ -150,7 +150,7 @@ const Header = () => {
                 className={`py-2 px-4 rounded-lg transition-all duration-200 flex items-center space-x-2 cursor-pointer
                 ${
                   activeTab === tab.id
-                    ? "bg-white bg-opacity-70 text-teal-600 shadow-sm"
+                    ? "bg-white bg-opacity-70 text-orange-600 shadow-sm"
                     : "text-gray-600 hover:bg-white hover:bg-opacity-40"
                 }`}
                 whileHover={{ scale: 1.05 }}
@@ -166,7 +166,7 @@ const Header = () => {
                 <span className="font-medium">{tab.name}</span>
                 {activeTab === tab.id && (
                   <motion.div
-                    className="absolute bottom-0 left-0 h-0.5 bg-teal-600 w-full"
+                    className="absolute bottom-0 left-0 h-0.5 bg-orange-600 w-full"
                     layoutId="activeTab"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -211,19 +211,19 @@ const Header = () => {
               <AnimatePresence>
                 {showNotifications && (
                   <motion.div
-                    className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-lg overflow-hidden z-50 border border-teal-100"
+                    className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-lg overflow-hidden z-50 border border-orange-200"
                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="p-3 border-b border-teal-100 flex justify-between items-center">
+                    <div className="p-3 border-b border-orange-200">
                       <h3 className="font-semibold text-gray-700">
                         Notifications
                       </h3>
                       {unreadCount > 0 && (
                         <button
-                          className="text-sm text-teal-600 hover:text-teal-700"
+                          className="text-sm text-orange-600 hover:text-orange-700"
                           onClick={markAllAsRead}
                         >
                           Mark all as read
@@ -274,7 +274,7 @@ const Header = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: 0.7 }}
               >
-                <div className="h-8 w-8 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white overflow-hidden">
+                <div className="h-8 w-8 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white overflow-hidden">
                   <UserAvatar
                     src={currentUser?.profileImage}
                     alt={currentUser?.name}
@@ -294,7 +294,7 @@ const Header = () => {
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="p-3 border-b border-teal-100">
+                    <div className="p-3 border-b border-orange-200">
                       <p className="font-medium text-gray-800 truncate">
                         {currentUser?.name || "User"}
                       </p>
@@ -331,7 +331,7 @@ const Header = () => {
         <AnimatePresence>
           {menuOpen && (
             <motion.div
-              className="sm:hidden py-2 border-t border-teal-100"
+              className="sm:hidden py-2 border-t border-orange-200"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
@@ -348,7 +348,7 @@ const Header = () => {
                     className={`py-2 px-4 rounded-lg transition-all duration-200 flex items-center space-x-2 
                     ${
                       activeTab === tab.id
-                        ? "bg-white bg-opacity-70 text-teal-600 shadow-sm"
+                        ? "bg-white bg-opacity-70 text-orange-600 shadow-sm"
                         : "text-gray-600 hover:bg-white hover:bg-opacity-40"
                     }`}
                     initial={{ opacity: 0, x: -20 }}

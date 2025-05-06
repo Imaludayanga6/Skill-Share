@@ -204,9 +204,9 @@ const CreatePostForm = ({ onPostCreated }) => {
 
         {/* Media Preview Section */}
         {isProcessingFiles ? (
-          <div className="flex justify-center items-center h-40 my-3 bg-white rounded-lg border border-teal-100">
+          <div className="flex justify-center items-center h-40 my-3 bg-white rounded-lg border border-orange-200">
             <div className="flex flex-col items-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-teal-500 mb-2"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-orange-500 mb-2"></div>
               <p className="text-gray-600 text-sm">Processing files...</p>
             </div>
           </div>
@@ -290,7 +290,7 @@ const CreatePostForm = ({ onPostCreated }) => {
             className={`flex items-center space-x-2 px-3 py-1.5 rounded-lg transition-all duration-200 ${
               isSubmitting || isProcessingFiles
                 ? "bg-gray-200 text-gray-500 cursor-not-allowed"
-                : "bg-white border border-teal-100 cursor-pointer hover:bg-teal-50"
+                : "bg-white border border-orange-200 cursor-pointer hover:bg-orange-50"  // Changed border and hover
             }`}
           >
             <span className="text-lg">📷</span>
@@ -309,7 +309,7 @@ const CreatePostForm = ({ onPostCreated }) => {
 
           <motion.button
             type="submit"
-            className="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors disabled:bg-teal-300 cursor-pointer"
+            className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:bg-orange-300 cursor-pointer"
             whileHover={{ scale: isSubmitting || isProcessingFiles ? 1 : 1.05 }}
             whileTap={{ scale: isSubmitting || isProcessingFiles ? 1 : 0.95 }}
             disabled={isSubmitting || isProcessingFiles}

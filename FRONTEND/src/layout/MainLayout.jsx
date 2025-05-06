@@ -45,65 +45,63 @@ const MainLayout = ({ children, activeTab }) => {
   }, [currentUser]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-teal-100">
-      <Header activeTab={activeTab} />
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100">
+  <Header activeTab={activeTab} />
 
-      <div className="pt-20 pb-10 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Left Sidebar */}
-          <motion.div
-            className="hidden lg:block lg:col-span-3 space-y-4"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: isLoaded ? 1 : 0, x: isLoaded ? 0 : -20 }}
-            transition={{ duration: 0.5 }}
-          >
-            {/* Navigation Panel */}
-            <div className="bg-white rounded-2xl shadow-md border border-teal-100 overflow-hidden">
-              <div className="p-4 border-b border-teal-100">
-                <h3 className="font-semibold text-gray-800">Navigation</h3>
-              </div>
-              <div className="p-2">
-                <div className="space-y-1">
-                  {[
-                    { icon: <User size={18} />, label: "My Profile" },
-                    { icon: <Bookmark size={18} />, label: "Saved Items" },
-                    { icon: <Compass size={18} />, label: "Explore" },
-                    { icon: <Users size={18} />, label: "My Network" },
-                  ].map((item, index) => (
-                    <motion.button
-                      key={index}
-                      className="w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-teal-50 transition-all duration-200"
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{
-                        opacity: isLoaded ? 1 : 0,
-                        x: isLoaded ? 0 : -20,
-                      }}
-                      transition={{ duration: 0.3, delay: index * 0.1 }}
-                      whileHover={{ x: 5 }}
-                    >
-                      <span className="text-teal-500">{item.icon}</span>
-                      <span>{item.label}</span>
-                    </motion.button>
-                  ))}
-                </div>
-              </div>
+  <div className="pt-20 pb-10 px-4">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6">
+      {/* Left Sidebar */}
+      <motion.div
+        className="hidden lg:block lg:col-span-3 space-y-4"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: isLoaded ? 1 : 0, x: isLoaded ? 0 : -20 }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* Navigation Panel */}
+        <div className="bg-white rounded-2xl shadow-md border border-orange-200 overflow-hidden">
+          <div className="p-4 border-b border-orange-200">
+            <h3 className="font-semibold text-gray-800">Navigation</h3>
+          </div>
+          <div className="p-2">
+            <div className="space-y-1">
+              {[
+                { icon: <User size={18} />, label: "My Profile" },
+                { icon: <Bookmark size={18} />, label: "Saved Items" },
+                { icon: <Compass size={18} />, label: "Explore" },
+                { icon: <Users size={18} />, label: "My Network" },
+              ].map((item, index) => (
+                <motion.button
+                  key={index}
+                  className="w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-orange-50 transition-all duration-200"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{
+                    opacity: isLoaded ? 1 : 0,
+                    x: isLoaded ? 0 : -20,
+                  }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  whileHover={{ x: 5 }}
+                >
+                  <span className="text-orange-500">{item.icon}</span>
+                  <span>{item.label}</span>
+                </motion.button>
+              ))}
             </div>
+          </div>
+        </div>
+      </motion.div>
 
-            
-          </motion.div>
+      {/* Main Content */}
+      <motion.div
+        className="col-span-1 lg:col-span-6 space-y-6"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        {children}
+      </motion.div>
 
-          {/* Main Content */}
-          <motion.div
-            className="col-span-1 lg:col-span-6 space-y-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            {children}
-          </motion.div>
-
-          {/* Right Sidebar */}
-          <motion.div
+      {/* Right Sidebar */}
+      <motion.div
             className="hidden lg:block lg:col-span-3 space-y-4"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: isLoaded ? 1 : 0, x: isLoaded ? 0 : 20 }}
@@ -203,9 +201,9 @@ const MainLayout = ({ children, activeTab }) => {
               </div>
             </div>
           </motion.div>
-        </div>
-      </div>
     </div>
+  </div>
+</div>
   );
 };
 
