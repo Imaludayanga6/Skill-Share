@@ -26,7 +26,7 @@ const STATUS_OPTIONS = [
   {
     id: "in_progress",
     name: "In Progress",
-    color: "bg-teal-100 text-orange-800",
+    color: "bg-orange-100 text-orange-800",
   },
   { id: "completed", name: "Completed", color: "bg-green-100 text-green-800" },
 ];
@@ -321,12 +321,12 @@ const LearningProgressPage = () => {
     <div className="max-w-2xl mx-auto px-4 pb-10">
       {/* Create Progress Update Form */}
       <motion.div
-        className="bg-white rounded-2xl shadow-lg border border-teal-100 mb-6 overflow-hidden"
+        className="bg-white rounded-2xl shadow-lg border border-orange-200 mb-6 overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="p-4 border-b border-teal-100">
+        <div className="p-4 border-b border-orange-200">
           <h2 className="text-xl font-semibold text-gray-800">
             Share Your Learning Progress
           </h2>
@@ -342,7 +342,7 @@ const LearningProgressPage = () => {
               <select
                 value={selectedTemplate}
                 onChange={handleTemplateChange}
-                className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors"
+                className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors"
                 disabled={isSubmitting}
               >
                 {TEMPLATES.map((template) => (
@@ -361,7 +361,7 @@ const LearningProgressPage = () => {
               <select
                 value={selectedStatus}
                 onChange={handleStatusChange}
-                className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors"
+                className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors"
                 disabled={isSubmitting}
               >
                 {STATUS_OPTIONS.map((status) => (
@@ -386,7 +386,7 @@ const LearningProgressPage = () => {
                   placeholder="Give your progress update a clear title"
                   className={`w-full p-2 bg-white rounded-lg border ${
                     errors.title ? "border-red-500" : "border-gray-200"
-                  } focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors`}
+                  } focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors`}
                   disabled={isSubmitting}
                 />
                 {errors.title && (
@@ -412,7 +412,7 @@ const LearningProgressPage = () => {
                   rows="3"
                   className={`w-full p-2 bg-white rounded-lg border ${
                     errors.description ? "border-red-500" : "border-gray-200"
-                  } focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors`}
+                  } focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors`}
                   disabled={isSubmitting}
                 />
                 {errors.description && (
@@ -438,7 +438,7 @@ const LearningProgressPage = () => {
                   placeholder="Name of the tutorial you completed"
                   className={`w-full p-2 bg-white rounded-lg border ${
                     errors.tutorialName ? "border-red-500" : "border-gray-200"
-                  } focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors`}
+                  } focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors`}
                   disabled={isSubmitting}
                 />
                 {errors.tutorialName && (
@@ -464,7 +464,7 @@ const LearningProgressPage = () => {
                   placeholder="Name of your project"
                   className={`w-full p-2 bg-white rounded-lg border ${
                     errors.projectName ? "border-red-500" : "border-gray-200"
-                  } focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors`}
+                  } focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors`}
                   disabled={isSubmitting}
                 />
                 {errors.projectName && (
@@ -484,7 +484,7 @@ const LearningProgressPage = () => {
                   type="text"
                   {...register("skillsLearned")}
                   placeholder="Skills or technologies you learned (comma-separated)"
-                  className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors"
+                  className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors"
                   disabled={isSubmitting}
                 />
               </div>
@@ -499,7 +499,7 @@ const LearningProgressPage = () => {
                   {...register("challenges")}
                   placeholder="What challenges did you encounter and how did you overcome them?"
                   rows="2"
-                  className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors"
+                  className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors"
                   disabled={isSubmitting}
                 />
               </div>
@@ -514,7 +514,7 @@ const LearningProgressPage = () => {
                   {...register("nextSteps")}
                   placeholder="What are your next steps or goals?"
                   rows="2"
-                  className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors"
+                  className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors"
                   disabled={isSubmitting}
                 />
               </div>
@@ -524,7 +524,7 @@ const LearningProgressPage = () => {
           <div className="mt-4 flex justify-end">
             <motion.button
               type="submit"
-              className="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors disabled:bg-teal-300 cursor-pointer"
+              className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:bg-orange-300 cursor-pointer"
               whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
               whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
               disabled={isSubmitting}
@@ -538,11 +538,11 @@ const LearningProgressPage = () => {
       {/* Progress Entries Feed */}
       {loading ? (
         <div className="flex justify-center items-center my-12">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-500"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
         </div>
       ) : progressEntries.length === 0 ? (
         <motion.div
-          className="bg-white rounded-2xl shadow-lg border border-teal-100 p-8 text-center"
+          className="bg-white rounded-2xl shadow-lg border border-orange-200 p-8 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}

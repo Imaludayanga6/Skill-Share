@@ -50,13 +50,13 @@ const EditLearningPlanModal = ({ plan, onClose, onPlanUpdated, token }) => {
   return (
     <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
       <motion.div
-        className="bg-white rounded-2xl shadow-xl w-full max-w-md m-4 overflow-hidden border border-teal-100"
+        className="bg-white rounded-2xl shadow-xl w-full max-w-md m-4 overflow-hidden border border-orange-100"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.9 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="flex justify-between items-center p-4 border-b border-teal-100">
+        <div className="flex justify-between items-center p-4 border-b border-orange-100">
           <h3 className="text-lg font-semibold text-gray-800">
             Edit Learning Plan
           </h3>
@@ -79,7 +79,7 @@ const EditLearningPlanModal = ({ plan, onClose, onPlanUpdated, token }) => {
               placeholder="Give your learning plan a clear title"
               className={`w-full p-2 bg-white rounded-lg border ${
                 errors.title ? "border-red-500" : "border-gray-200"
-              } focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors`}
+              } focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors`}
               disabled={isSubmitting}
             />
             {errors.title && (
@@ -101,7 +101,7 @@ const EditLearningPlanModal = ({ plan, onClose, onPlanUpdated, token }) => {
               rows="4"
               className={`w-full p-2 bg-white rounded-lg border ${
                 errors.description ? "border-red-500" : "border-gray-200"
-              } focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors`}
+              } focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors`}
               disabled={isSubmitting}
             />
             {errors.description && (
@@ -119,7 +119,7 @@ const EditLearningPlanModal = ({ plan, onClose, onPlanUpdated, token }) => {
               type="text"
               {...register("topics")}
               placeholder="e.g., JavaScript, React, UI Design"
-              className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors"
+              className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors"
               disabled={isSubmitting}
             />
             <p className="mt-1 text-xs text-gray-500">
@@ -135,7 +135,7 @@ const EditLearningPlanModal = ({ plan, onClose, onPlanUpdated, token }) => {
               {...register("resources")}
               placeholder="e.g., https://example.com/tutorial, Book: JavaScript Basics"
               rows="3"
-              className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors"
+              className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors"
               disabled={isSubmitting}
             />
             <p className="mt-1 text-xs text-gray-500">
@@ -156,7 +156,7 @@ const EditLearningPlanModal = ({ plan, onClose, onPlanUpdated, token }) => {
             </motion.button>
             <motion.button
               type="submit"
-              className="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors disabled:bg-teal-300 cursor-pointer"
+              className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:bg-orange-300 cursor-pointer"
               whileHover={{ scale: isSubmitting ? 1 : 1.03 }}
               whileTap={{ scale: isSubmitting ? 1 : 0.97 }}
               disabled={isSubmitting}
