@@ -55,7 +55,7 @@ export default function LoginPage() {
       <div className="hidden md:block md:w-1/2">
         <div className="h-full w-full">
           <img
-            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+            src="https://www.skill-sync.co.uk/wp-content/uploads/DALL%C2%B7E-2024-02-10-14.36.19-Image-1_-A-close-up-view-of-a-medical-professional-using-Skill-SYNC-on-a-tablet-deeply-engaged-in-reviewing-competency-based-assessments.-The-tablet-.webp"
             alt="Modern workspace with computer"
             className="h-full w-full object-cover"
           />

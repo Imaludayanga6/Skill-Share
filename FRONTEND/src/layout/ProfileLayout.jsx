@@ -31,7 +31,7 @@ const ProfileLayout = ({
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-teal-50 to-teal-100">
+      <div className="min-h-screen bg-blue-50">
         <Header />
         <div className="max-w-6xl mx-auto px-4 pt-20 pb-10">
           <div className="flex justify-center items-center py-20">
@@ -43,7 +43,7 @@ const ProfileLayout = ({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-teal-100">
+    <div className="min-h-screen bg-blue-50">
       {/* Profile Header with Cover */}
       <div className="w-full bg-gradient-to-r from-teal-400 to-teal-600 h-48 relative">
         <div className="max-w-6xl mx-auto px-4 h-full relative bg-teal-500">
