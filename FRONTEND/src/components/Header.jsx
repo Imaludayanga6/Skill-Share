@@ -132,7 +132,7 @@ const Header = () => {
               className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400 cursor-pointer"
               onClick={() => navigate("/")}
             >
-              SkillSphere
+              SkillSYNC
             </motion.h1>
           </div>
 
@@ -235,8 +235,8 @@ const Header = () => {
                         notifications.map((notification, index) => (
                           <motion.div
                             key={notification.id}
-                            className={`p-3 border-b border-teal-100 hover:bg-teal-50 cursor-pointer ${
-                              !notification.read ? "bg-teal-50" : ""
+                            className={`p-3 border-b border-teal-100 hover:bg-blue-900 cursor-pointer ${
+                              !notification.read ? "bg-blue-900" : ""
                             }`}
                             onClick={() => markAsRead(notification.id)}
                             initial={{ opacity: 0, y: 10 }}
@@ -304,7 +304,7 @@ const Header = () => {
                     </div>
                     <div>
                       <motion.button
-                        className="flex items-center space-x-2 w-full p-3 text-left hover:bg-teal-50 transition-colors cursor-pointer"
+                        className="flex items-center space-x-2 w-full p-3 text-left hover:bg-blue-900 transition-colors cursor-pointer"
                         onClick={navigateToProfile}
                         whileHover={{ x: 5 }}
                       >

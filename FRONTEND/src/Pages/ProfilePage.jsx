@@ -734,15 +734,14 @@ const ProfilePage = () => {
 
   if (!profileUser && !isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+      <div className="min-h-screen flex items-center justify-center bg-blue-900 p-4">
         <div className="max-w-md w-full bg-white bg-opacity-70 backdrop-blur-lg rounded-xl shadow-lg overflow-hidden border border-white border-opacity-30 p-8 text-center">
           <AlertCircle size={48} className="text-red-500 mb-4 mx-auto" />
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
             User Not Found
           </h2>
           <p className="text-gray-600 mb-4">
-            The user profile you're looking for doesn't exist or has been
-            removed.
+            The user profile you're looking for doesn't exist or has been removed.
           </p>
           <button
             onClick={() => navigate("/")}
@@ -786,210 +785,212 @@ const ProfilePage = () => {
   );
 
   return (
-    <ProfileLayout
-      profileUser={profileUser}
-      isLoading={isLoading}
-      actionButtons={actionButtons}
-      totalPostCount={totalPostCount}
-      onShowFollowers={handleShowFollowers}
-      onShowFollowing={handleShowFollowing}
-    >
-      {/* Content Tabs */}
-      <div className="bg-white bg-opacity-30 backdrop-blur-lg rounded-xl shadow-md border border-white border-opacity-30 overflow-hidden mb-6">
-        <div className="flex border-b border-gray-200">
-          {["posts", "progress", "plans"].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`relative flex-1 py-3 text-center ${
-                activeTab === tab
-                  ? "text-blue-600 font-medium"
-                  : "text-gray-600 hover:text-gray-900"
-              }`}
-            >
-              <span className="capitalize">
-                {tab === "posts"
-                  ? "Skill Sharing"
-                  : tab === "progress"
-                  ? "Learning Progress"
-                  : "Learning Plans"}
-              </span>
-              {activeTab === tab && (
-                <motion.div
-                  className="absolute bottom-0 left-0 h-0.5 bg-blue-600 w-full"
-                  layoutId="activeTab"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-              )}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Content Section */}
-      <div className="space-y-6">
-        {contentLoading ? (
-          <div className="flex justify-center items-center py-10">
-            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
+    <div className="min-h-screen bg-blue-900">
+      <ProfileLayout
+        profileUser={profileUser}
+        isLoading={isLoading}
+        actionButtons={actionButtons}
+        totalPostCount={totalPostCount}
+        onShowFollowers={handleShowFollowers}
+        onShowFollowing={handleShowFollowing}
+      >
+        {/* Content Tabs */}
+        <div className="bg-white bg-opacity-30 backdrop-blur-lg rounded-xl shadow-md border border-white border-opacity-30 overflow-hidden mb-6">
+          <div className="flex border-b border-gray-200">
+            {["posts", "progress", "plans"].map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`relative flex-1 py-3 text-center ${
+                  activeTab === tab
+                    ? "text-blue-600 font-medium"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                <span className="capitalize">
+                  {tab === "posts"
+                    ? "Skill Sharing"
+                    : tab === "progress"
+                    ? "Learning Progress"
+                    : "Learning Plans"}
+                </span>
+                {activeTab === tab && (
+                  <motion.div
+                    className="absolute bottom-0 left-0 h-0.5 bg-blue-600 w-full"
+                    layoutId="activeTab"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
+              </button>
+            ))}
           </div>
-        ) : (
-          <>
-            {activeTab === "posts" &&
-              (posts.length > 0 ? (
-                posts.map((post) => (
-                  <SkillSharingCard
-                    key={post.id}
-                    post={post}
-                    currentUser={currentUser}
-                    onLike={handleLikePost}
-                    onDelete={handleDeletePost}
-                    onComment={handleAddPostComment}
-                    onCommentUpdated={handleUpdatePostComment}
-                    onCommentDeleted={handleDeletePostComment}
-                    token={currentUser?.token}
-                  />
-                ))
-              ) : (
-                <div className="bg-white bg-opacity-30 backdrop-blur-lg rounded-xl shadow-md border border-white border-opacity-30 p-8 text-center">
-                  <h3 className="text-xl font-medium text-gray-700 mb-2">
-                    No posts yet
-                  </h3>
-                  <p className="text-gray-600">
-                    {isOwner
-                      ? "Share your skills with the community!"
-                      : `${profileUser.name} hasn't shared any posts yet.`}
-                  </p>
-                </div>
-              ))}
+        </div>
 
-            {activeTab === "progress" &&
-              (progressEntries.length > 0 ? (
-                progressEntries.map((progress) => (
-                  <LearningProgressCard
-                    key={progress.id}
-                    progress={progress}
-                    currentUser={currentUser}
-                    onLike={handleLikeProgress}
-                    onDelete={handleDeleteProgress}
-                    onEdit={handleEditProgress}
-                    onComment={handleAddProgressComment}
-                    onUpdateComment={handleUpdateProgressComment}
-                    onDeleteComment={handleDeleteProgressComment}
-                    token={currentUser?.token}
-                  />
-                ))
-              ) : (
-                <div className="bg-white bg-opacity-30 backdrop-blur-lg rounded-xl shadow-md border border-white border-opacity-30 p-8 text-center">
-                  <h3 className="text-xl font-medium text-gray-700 mb-2">
-                    No progress updates yet
-                  </h3>
-                  <p className="text-gray-600">
-                    {isOwner
-                      ? "Start sharing your learning journey!"
-                      : `${profileUser.name} hasn't shared any progress updates yet.`}
-                  </p>
-                </div>
-              ))}
+        {/* Content Section */}
+        <div className="space-y-6">
+          {contentLoading ? (
+            <div className="flex justify-center items-center py-10">
+              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
+            </div>
+          ) : (
+            <>
+              {activeTab === "posts" &&
+                (posts.length > 0 ? (
+                  posts.map((post) => (
+                    <SkillSharingCard
+                      key={post.id}
+                      post={post}
+                      currentUser={currentUser}
+                      onLike={handleLikePost}
+                      onDelete={handleDeletePost}
+                      onComment={handleAddPostComment}
+                      onCommentUpdated={handleUpdatePostComment}
+                      onCommentDeleted={handleDeletePostComment}
+                      token={currentUser?.token}
+                    />
+                  ))
+                ) : (
+                  <div className="bg-white bg-opacity-30 backdrop-blur-lg rounded-xl shadow-md border border-white border-opacity-30 p-8 text-center">
+                    <h3 className="text-xl font-medium text-gray-700 mb-2">
+                      No posts yet
+                    </h3>
+                    <p className="text-gray-600">
+                      {isOwner
+                        ? "Share your skills with the community!"
+                        : `${profileUser.name} hasn't shared any posts yet.`}
+                    </p>
+                  </div>
+                ))}
 
-            {activeTab === "plans" &&
-              (learningPlans.length > 0 ? (
-                learningPlans.map((plan) => (
-                  <LearningPlanCard
-                    key={plan.id}
-                    plan={plan}
-                    currentUser={currentUser}
-                    onLike={handleLikePlan}
-                    onDelete={handleDeletePlan}
-                    onEdit={handleEditPlan}
-                    onComment={handleAddPlanComment}
-                    onUpdateComment={handleUpdatePlanComment}
-                    onDeleteComment={handleDeletePlanComment}
-                    token={currentUser?.token}
-                  />
-                ))
-              ) : (
-                <div className="bg-white bg-opacity-30 backdrop-blur-lg rounded-xl shadow-md border border-white border-opacity-30 p-8 text-center">
-                  <h3 className="text-xl font-medium text-gray-700 mb-2">
-                    No learning plans yet
-                  </h3>
-                  <p className="text-gray-600">
-                    {isOwner
-                      ? "Create and share learning plans with the community!"
-                      : `${profileUser.name} hasn't shared any learning plans yet.`}
-                  </p>
-                </div>
-              ))}
-          </>
+              {activeTab === "progress" &&
+                (progressEntries.length > 0 ? (
+                  progressEntries.map((progress) => (
+                    <LearningProgressCard
+                      key={progress.id}
+                      progress={progress}
+                      currentUser={currentUser}
+                      onLike={handleLikeProgress}
+                      onDelete={handleDeleteProgress}
+                      onEdit={handleEditProgress}
+                      onComment={handleAddProgressComment}
+                      onUpdateComment={handleUpdateProgressComment}
+                      onDeleteComment={handleDeleteProgressComment}
+                      token={currentUser?.token}
+                    />
+                  ))
+                ) : (
+                  <div className="bg-white bg-opacity-30 backdrop-blur-lg rounded-xl shadow-md border border-white border-opacity-30 p-8 text-center">
+                    <h3 className="text-xl font-medium text-gray-700 mb-2">
+                      No progress updates yet
+                    </h3>
+                    <p className="text-gray-600">
+                      {isOwner
+                        ? "Start sharing your learning journey!"
+                        : `${profileUser.name} hasn't shared any progress updates yet.`}
+                    </p>
+                  </div>
+                ))}
+
+              {activeTab === "plans" &&
+                (learningPlans.length > 0 ? (
+                  learningPlans.map((plan) => (
+                    <LearningPlanCard
+                      key={plan.id}
+                      plan={plan}
+                      currentUser={currentUser}
+                      onLike={handleLikePlan}
+                      onDelete={handleDeletePlan}
+                      onEdit={handleEditPlan}
+                      onComment={handleAddPlanComment}
+                      onUpdateComment={handleUpdatePlanComment}
+                      onDeleteComment={handleDeletePlanComment}
+                      token={currentUser?.token}
+                    />
+                  ))
+                ) : (
+                  <div className="bg-white bg-opacity-30 backdrop-blur-lg rounded-xl shadow-md border border-white border-opacity-30 p-8 text-center">
+                    <h3 className="text-xl font-medium text-gray-700 mb-2">
+                      No learning plans yet
+                    </h3>
+                    <p className="text-gray-600">
+                      {isOwner
+                        ? "Create and share learning plans with the community!"
+                        : `${profileUser.name} hasn't shared any learning plans yet.`}
+                    </p>
+                  </div>
+                ))}
+            </>
+          )}
+        </div>
+
+        {/* Modals */}
+        {showEditProfile && (
+          <EditProfileModal
+            user={profileUser}
+            onClose={() => setShowEditProfile(false)}
+            onProfileUpdated={handleProfileUpdated}
+            token={currentUser?.token}
+          />
         )}
-      </div>
 
-      {/* Modals */}
-      {showEditProfile && (
-        <EditProfileModal
-          user={profileUser}
-          onClose={() => setShowEditProfile(false)}
-          onProfileUpdated={handleProfileUpdated}
-          token={currentUser?.token}
+        {showFollowers && (
+          <FollowersModal
+            isOpen={showFollowers}
+            onClose={() => setShowFollowers(false)}
+            title="Followers"
+            users={profileUser.followedUsers || []}
+            currentUser={currentUser}
+            token={currentUser?.token}
+          />
+        )}
+
+        {showFollowing && (
+          <FollowersModal
+            isOpen={showFollowing}
+            onClose={() => setShowFollowing(false)}
+            title="Following"
+            users={profileUser.followingUsers || []}
+            currentUser={currentUser}
+            token={currentUser?.token}
+          />
+        )}
+
+        {/* Edit Progress Modal */}
+        {editingProgress && (
+          <EditLearningProgressModal
+            progressEntry={editingProgress}
+            onClose={() => setEditingProgress(null)}
+            onProgressUpdated={handleProgressUpdated}
+            token={currentUser?.token}
+          />
+        )}
+
+        {/* Edit Plan Modal */}
+        {editingPlan && (
+          <EditLearningPlanModal
+            plan={editingPlan}
+            onClose={() => setEditingPlan(null)}
+            onPlanUpdated={handlePlanUpdated}
+            token={currentUser?.token}
+          />
+        )}
+
+        {/* Confirmation Modal */}
+        <ConfirmModal
+          isOpen={modalState.isOpen}
+          onClose={closeModal}
+          onConfirm={modalState.onConfirm}
+          title={modalState.title}
+          message={modalState.message}
+          confirmText={modalState.confirmText}
+          cancelText={modalState.cancelText}
+          confirmButtonClass={modalState.confirmButtonClass}
+          type={modalState.type}
         />
-      )}
-
-      {showFollowers && (
-        <FollowersModal
-          isOpen={showFollowers}
-          onClose={() => setShowFollowers(false)}
-          title="Followers"
-          users={profileUser.followedUsers || []}
-          currentUser={currentUser}
-          token={currentUser?.token}
-        />
-      )}
-
-      {showFollowing && (
-        <FollowersModal
-          isOpen={showFollowing}
-          onClose={() => setShowFollowing(false)}
-          title="Following"
-          users={profileUser.followingUsers || []}
-          currentUser={currentUser}
-          token={currentUser?.token}
-        />
-      )}
-
-      {/* Edit Progress Modal */}
-      {editingProgress && (
-        <EditLearningProgressModal
-          progressEntry={editingProgress}
-          onClose={() => setEditingProgress(null)}
-          onProgressUpdated={handleProgressUpdated}
-          token={currentUser?.token}
-        />
-      )}
-
-      {/* Edit Plan Modal */}
-      {editingPlan && (
-        <EditLearningPlanModal
-          plan={editingPlan}
-          onClose={() => setEditingPlan(null)}
-          onPlanUpdated={handlePlanUpdated}
-          token={currentUser?.token}
-        />
-      )}
-
-      {/* Confirmation Modal */}
-      <ConfirmModal
-        isOpen={modalState.isOpen}
-        onClose={closeModal}
-        onConfirm={modalState.onConfirm}
-        title={modalState.title}
-        message={modalState.message}
-        confirmText={modalState.confirmText}
-        cancelText={modalState.cancelText}
-        confirmButtonClass={modalState.confirmButtonClass}
-        type={modalState.type}
-      />
-    </ProfileLayout>
+      </ProfileLayout>
+    </div>
   );
 };
 

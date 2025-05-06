@@ -17,7 +17,7 @@ export default function LandingPage() {
         <div className="navbar-container">
           <div className="navbar-content">
             <div className="logo" onClick={() => (window.location.href = "/")}>
-              <span>SkillSphere</span>
+              <span>SkillSYNC</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -114,7 +114,7 @@ export default function LandingPage() {
           <div className="hero-content">
             <h1 className="hero-title">
               <span>Share & Learn Skills with</span>
-              <span className="highlight">SkillSphere</span>
+              <span className="highlight">SkillSYNC</span>
             </h1>
             <p className="hero-description">
               Connect with a vibrant community to share skills like coding,
@@ -142,7 +142,7 @@ export default function LandingPage() {
       <div id="features" className="features-section">
         <div className="features-container">
           <div className="features-header">
-            <h2 className="features-title">Why Choose SkillSphere?</h2>
+            <h2 className="features-title">Why Choose SkillSYNC?</h2>
             <p className="features-description">
               Discover powerful features to enhance your skill-sharing and
               learning journey.
@@ -319,16 +319,16 @@ export default function LandingPage() {
       <div id="about" className="about-section">
         <div className="about-container">
           <div className="about-header">
-            <h2 className="about-title">About SkillSphere</h2>
+            <h2 className="about-title">About SkillSYNC</h2>
             <p className="about-description">
-              SkillSphere is your go-to platform for learning and sharing skills
+            SkillSYNC is your go-to platform for learning and sharing skills
               in a supportive community.
             </p>
           </div>
           <div className="about-content">
             <p>
               Whether you're passionate about coding, cooking, photography, or
-              DIY crafts, SkillSphere empowers you to share your expertise and
+              DIY crafts, SkillSYNC empowers you to share your expertise and
               learn from others. Create structured learning plans, track your
               progress, and engage with a vibrant community through likes,
               comments, and follows. Join us today and start your skill-sharing
