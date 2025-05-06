@@ -235,8 +235,8 @@ const Header = () => {
                         notifications.map((notification, index) => (
                           <motion.div
                             key={notification.id}
-                            className={`p-3 border-b border-teal-100 hover:bg-blue-900 cursor-pointer ${
-                              !notification.read ? "bg-blue-900" : ""
+                            className={`p-3 border-b border-teal-100 hover:bg-white-900 cursor-pointer ${
+                              !notification.read ? "bg-orange-50" : ""
                             }`}
                             onClick={() => markAsRead(notification.id)}
                             initial={{ opacity: 0, y: 10 }}
@@ -304,7 +304,7 @@ const Header = () => {
                     </div>
                     <div>
                       <motion.button
-                        className="flex items-center space-x-2 w-full p-3 text-left hover:bg-blue-900 transition-colors cursor-pointer"
+                        className="flex items-center space-x-2 w-full p-3 text-left hover:bg-orange-100 transition-colors cursor-pointer"
                         onClick={navigateToProfile}
                         whileHover={{ x: 5 }}
                       >

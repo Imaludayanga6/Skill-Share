@@ -110,8 +110,8 @@ const MainLayout = ({ children, activeTab }) => {
             
 
             {/* Learning Stats */}
-            <div className="bg-white rounded-2xl shadow-md border border-teal-100 overflow-hidden">
-              <div className="p-4 border-b border-teal-100">
+            <div className="bg-white rounded-2xl shadow-md border border-orange-200 overflow-hidden">
+              <div className="p-4 border-b border-orange-200">
                 <h3 className="font-semibold text-gray-800">
                   Your Learning Stats
                 </h3>
@@ -127,13 +127,13 @@ const MainLayout = ({ children, activeTab }) => {
                       <span className="text-sm font-medium text-gray-700">
                         Weekly Progress
                       </span>
-                      <span className="text-sm font-medium text-teal-600">
+                      <span className="text-sm font-medium text-orange-600">
                         75%
                       </span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <motion.div
-                        className="bg-teal-600 h-2 rounded-full"
+                        className="bg-orange-500 h-2 rounded-full"
                         initial={{ width: "0%" }}
                         animate={{ width: "75%" }}
                         transition={{ duration: 1, delay: 1 }}
@@ -150,13 +150,13 @@ const MainLayout = ({ children, activeTab }) => {
                       <span className="text-sm font-medium text-gray-700">
                         Completed Courses
                       </span>
-                      <span className="text-sm font-medium text-teal-600">
+                      <span className="text-sm font-medium text-orange-600">
                         12
                       </span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <motion.div
-                        className="bg-teal-600 h-2 rounded-full"
+                        className="bg-orange-500 h-2 rounded-full"
                         initial={{ width: "0%" }}
                         animate={{ width: "60%" }}
                         transition={{ duration: 1, delay: 1.3 }}
@@ -173,13 +173,13 @@ const MainLayout = ({ children, activeTab }) => {
                       <span className="text-sm font-medium text-gray-700">
                         Active Streaks
                       </span>
-                      <span className="text-sm font-medium text-teal-600">
+                      <span className="text-sm font-medium text-orange-600">
                         5 days
                       </span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <motion.div
-                        className="bg-teal-600 h-2 rounded-full"
+                        className="bg-orange-500 h-2 rounded-full"
                         initial={{ width: "0%" }}
                         animate={{ width: "50%" }}
                         transition={{ duration: 1, delay: 1.5 }}
@@ -189,7 +189,7 @@ const MainLayout = ({ children, activeTab }) => {
                 </div>
 
                 <motion.button
-                  className="w-full mt-4 py-2 bg-teal-100 text-teal-800 rounded-lg hover:bg-teal-200 transition-colors text-sm font-medium"
+                  className="w-full mt-4 py-2 bg-orange-100 text-orange-800 rounded-lg hover:bg-orange-200 transition-colors text-sm font-medium"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   initial={{ opacity: 0 }}
