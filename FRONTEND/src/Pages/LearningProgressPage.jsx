@@ -26,7 +26,7 @@ const STATUS_OPTIONS = [
   {
     id: "in_progress",
     name: "In Progress",
-    color: "bg-teal-100 text-teal-800",
+    color: "bg-teal-100 text-orange-800",
   },
   { id: "completed", name: "Completed", color: "bg-green-100 text-green-800" },
 ];
