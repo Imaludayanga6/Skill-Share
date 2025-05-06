@@ -236,12 +236,12 @@ const LearningPlanPage = () => {
     <div className="max-w-2xl mx-auto px-4 pb-10">
       {/* Create Learning Plan Form */}
       <motion.div
-        className="bg-white rounded-2xl shadow-lg border border-teal-100 mb-6 overflow-hidden"
+        className="bg-white rounded-2xl shadow-lg border border-orange-200 mb-6 overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="p-4 border-b border-teal-100">
+        <div className="p-4 border-b border-orange-200">
           <h2 className="text-xl font-semibold text-gray-800">
             Share Your Learning Plan
           </h2>
@@ -261,7 +261,7 @@ const LearningPlanPage = () => {
               placeholder="Give your learning plan a clear title"
               className={`w-full p-2 bg-white rounded-lg border ${
                 errors.title ? "border-red-500" : "border-gray-200"
-              } focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors`}
+              } focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors`}
               disabled={isSubmitting}
             />
             {errors.title && (
@@ -283,7 +283,7 @@ const LearningPlanPage = () => {
               rows="4"
               className={`w-full p-2 bg-white rounded-lg border ${
                 errors.description ? "border-red-500" : "border-gray-200"
-              } focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors`}
+              } focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors`}
               disabled={isSubmitting}
             />
             {errors.description && (
@@ -301,7 +301,7 @@ const LearningPlanPage = () => {
               type="text"
               {...register("topics")}
               placeholder="e.g., JavaScript, React, UI Design"
-              className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors"
+              className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors"
               disabled={isSubmitting}
             />
             <p className="mt-1 text-xs text-gray-500">
@@ -317,7 +317,7 @@ const LearningPlanPage = () => {
               {...register("resources")}
               placeholder="e.g., https://example.com/tutorial, Book: JavaScript Basics"
               rows="3"
-              className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors"
+              className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors"
               disabled={isSubmitting}
             />
             <p className="mt-1 text-xs text-gray-500">
@@ -328,7 +328,7 @@ const LearningPlanPage = () => {
           <div className="flex justify-end">
             <motion.button
               type="submit"
-              className="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors disabled:bg-teal-300 cursor-pointer"
+              className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:bg-orange-300 cursor-pointer"
               whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
               whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
               disabled={isSubmitting}
@@ -342,11 +342,11 @@ const LearningPlanPage = () => {
       {/* Learning Plans Feeds */}
       {loading ? (
         <div className="flex justify-center items-center my-12">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-500"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
         </div>
       ) : learningPlans.length === 0 ? (
         <motion.div
-          className="bg-white rounded-2xl shadow-lg border border-teal-100 p-8 text-center"
+          className="bg-white rounded-2xl shadow-lg border border-orange-200 p-8 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
