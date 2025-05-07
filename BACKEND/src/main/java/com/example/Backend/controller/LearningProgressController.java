@@ -96,13 +96,13 @@ public class LearningProgressController {
     }
 
     //ad a like to a learning progress entry
-    @PostMapping("/{entryId}/likes")
-    public ResponseEntity<LearningProgress> addLike(
-            @PathVariable String entryId,
-            @RequestBody Like like) {
-        LearningProgress updated = learningProgressService.addLike(entryId, like);
-        return new ResponseEntity<>(updated, HttpStatus.CREATED);
-    }
+    // @PostMapping("/{entryId}/likes")
+    // public ResponseEntity<LearningProgress> addLike(
+    //         @PathVariable String entryId,
+    //         @RequestBody Like like) {
+    //     LearningProgress updated = learningProgressService.addLike(entryId, like);
+    //     return new ResponseEntity<>(updated, HttpStatus.CREATED);
+    // }
 
     //rremove a like from a learning progress entry
     @DeleteMapping("/{entryId}/likes/{userId}")
