@@ -180,7 +180,7 @@ const CreatePostForm = ({ onPostCreated }) => {
 
   return (
     <motion.div
-      className="bg-white rounded-2xl shadow-lg border border-teal-100 overflow-hidden"
+      className="bg-white rounded-2xl shadow-lg border border-orange-100 overflow-hidden"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -190,7 +190,7 @@ const CreatePostForm = ({ onPostCreated }) => {
           placeholder="Share your skills or what you're learning..."
           className={`w-full p-3 bg-white rounded-lg border ${
             errors.description ? "border-red-500" : "border-gray-200"
-          } focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors`}
+          } focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors`}
           rows="3"
           {...register("description")}
           disabled={isSubmitting || isProcessingFiles}

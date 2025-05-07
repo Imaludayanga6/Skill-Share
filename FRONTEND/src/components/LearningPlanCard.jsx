@@ -59,11 +59,11 @@ const LearningPlanCard = ({
       .filter(Boolean) || [];
 
   return (
-    <div className="bg-white rounded-2xl shadow-md border border-teal-100 mb-6 overflow-hidden">
+    <div className="bg-white rounded-2xl shadow-md border border-orange-100 mb-6 overflow-hidden">
       {/* Plan Header */}
-      <div className="p-4 flex items-center justify-between border-b border-teal-100">
+      <div className="p-4 flex items-center justify-between border-b border-orange-100">
         <div className="flex items-center space-x-3">
-          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white overflow-hidden">
+          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white overflow-hidden">
             <UserAvatar
               src={plan.userProfileImage}
               alt={plan.userName}
@@ -87,7 +87,7 @@ const LearningPlanCard = ({
           <div className="flex space-x-1">
             <motion.button
               onClick={() => onEdit(plan)}
-              className="p-1 rounded-full hover:bg-teal-50 text-teal-600 cursor-pointer"
+              className="p-1 rounded-full hover:bg-orange-50 text-orange-600 cursor-pointer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -117,14 +117,14 @@ const LearningPlanCard = ({
         {topicTags.length > 0 && (
           <div className="mb-3">
             <div className="flex items-center gap-1 mb-2">
-              <Book size={16} className="text-teal-600" />
+              <Book size={16} className="text-orange-600" />
               <span className="text-sm font-medium text-gray-700">Topics:</span>
             </div>
             <div className="flex flex-wrap gap-1">
               {topicTags.map((topic, index) => (
                 <span
                   key={index}
-                  className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-teal-100 text-teal-800"
+                  className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800"
                 >
                   {topic}
                 </span>
@@ -137,7 +137,7 @@ const LearningPlanCard = ({
         {resourceList.length > 0 && (
           <div className="mb-3">
             <div className="flex items-center gap-1 mb-2">
-              <Link size={16} className="text-teal-600" />
+              <Link size={16} className="text-orange-600" />
               <span className="text-sm font-medium text-gray-700">
                 Resources:
               </span>
@@ -150,7 +150,7 @@ const LearningPlanCard = ({
                       href={resource}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-teal-600 hover:underline truncate inline-block max-w-full"
+                      className="text-orange-600 hover:underline truncate inline-block max-w-full"
                     >
                       {resource}
                     </a>
@@ -164,12 +164,12 @@ const LearningPlanCard = ({
         )}
 
         {/* Action Buttons */}
-        <div className="flex justify-between items-center mt-4 pb-2 border-b border-teal-100">
+        <div className="flex justify-between items-center mt-4 pb-2 border-b border-orange-100">
           <button
             className={`flex items-center space-x-1 px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
               isLikedByUser
                 ? "text-red-500 bg-red-50"
-                : "text-gray-600 hover:bg-teal-50"
+                : "text-gray-600 hover:bg-orange-50"
             }`}
             onClick={() => onLike(plan.id)}
           >
@@ -178,7 +178,7 @@ const LearningPlanCard = ({
           </button>
 
           <button
-            className="flex items-center space-x-1 px-3 py-1.5 rounded-lg text-gray-600 hover:bg-teal-50 transition-colors cursor-pointer"
+            className="flex items-center space-x-1 px-3 py-1.5 rounded-lg text-gray-600 hover:bg-orange-50 transition-colors cursor-pointer"
             onClick={() => setShowComments(!showComments)}
           >
             <span className="text-lg">💬</span>

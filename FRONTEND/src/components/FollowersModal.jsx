@@ -102,7 +102,7 @@ const FollowersModal = ({
           onClick={onClose}
         >
           <motion.div
-            className="bg-white rounded-2xl shadow-xl w-full max-w-md m-4 overflow-hidden border border-teal-100"
+            className="bg-white rounded-2xl shadow-xl w-full max-w-md m-4 overflow-hidden border border-orange-100"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
@@ -110,7 +110,7 @@ const FollowersModal = ({
             onClick={handleModalClick}
           >
             {/* Header */}
-            <div className="flex justify-between items-center p-4 border-b border-teal-100">
+            <div className="flex justify-between items-center p-4 border-b border-orange-100">
               <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
               <button
                 onClick={onClose}
@@ -121,7 +121,7 @@ const FollowersModal = ({
             </div>
 
             {/* Search */}
-            <div className="p-3 border-b border-teal-100">
+            <div className="p-3 border-b border-orange-100">
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <Search size={18} className="text-gray-400" />
@@ -129,7 +129,7 @@ const FollowersModal = ({
                 <input
                   type="text"
                   placeholder="Search users..."
-                  className="w-full pl-10 pr-4 py-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors"
+                  className="w-full pl-10 pr-4 py-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -140,7 +140,7 @@ const FollowersModal = ({
             <div className="max-h-96 overflow-y-auto">
               {loading ? (
                 <div className="flex justify-center items-center py-10">
-                  <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-teal-500"></div>
+                  <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-orange-500"></div>
                 </div>
               ) : filteredUsers.length === 0 ? (
                 <div className="p-6 text-center text-gray-500">
@@ -154,7 +154,7 @@ const FollowersModal = ({
                 filteredUsers.map((user) => (
                   <motion.div
                     key={user.id}
-                    className="p-4 border-b border-teal-100 hover:bg-teal-50 transition-colors"
+                    className="p-4 border-b border-orange-100 hover:bg-orange-50 transition-colors"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                   >
@@ -163,7 +163,7 @@ const FollowersModal = ({
                         className="flex items-center space-x-3 cursor-pointer flex-grow"
                         onClick={() => handleViewProfile(user.id)}
                       >
-                        <div className="h-10 w-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white overflow-hidden">
+                        <div className="h-10 w-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white overflow-hidden">
                           <UserAvatar
                             src={user.profileImage}
                             alt={user.name}
@@ -180,7 +180,7 @@ const FollowersModal = ({
                               {user.skills.slice(0, 2).map((skill, idx) => (
                                 <span
                                   key={idx}
-                                  className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-teal-100 text-teal-800"
+                                  className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-800"
                                 >
                                   {skill}
                                 </span>
@@ -201,7 +201,7 @@ const FollowersModal = ({
                           className={`p-2 rounded-full ${
                             followStates[user.id]
                               ? "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                              : "bg-teal-100 text-teal-700 hover:bg-teal-200"
+                              : "bg-orange-100 text-orange-700 hover:bg-orange-200"
                           } transition-colors`}
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}

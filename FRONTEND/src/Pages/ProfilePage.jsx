@@ -734,7 +734,7 @@ const ProfilePage = () => {
 
   if (!profileUser && !isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-blue-900 p-4">
+      <div className="min-h-screen flex items-center justify-center bg-orange-900 p-4">
         <div className="max-w-md w-full bg-white bg-opacity-70 backdrop-blur-lg rounded-xl shadow-lg overflow-hidden border border-white border-opacity-30 p-8 text-center">
           <AlertCircle size={48} className="text-red-500 mb-4 mx-auto" />
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
@@ -745,7 +745,7 @@ const ProfilePage = () => {
           </p>
           <button
             onClick={() => navigate("/")}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
           >
             Return to Home
           </button>
@@ -759,7 +759,7 @@ const ProfilePage = () => {
       {isOwner ? (
         <motion.button
           onClick={() => setShowEditProfile(true)}
-          className="p-2 bg-blue-100 text-blue-600 rounded-full hover:bg-blue-200 transition-colors cursor-pointer"
+          className="p-2 bg-orange-100 text-orange-600 rounded-full hover:bg-orange-200 transition-colors cursor-pointer"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           title="Edit Profile"
@@ -772,7 +772,7 @@ const ProfilePage = () => {
           className={`p-2 rounded-full cursor-pointer ml-4 ${
             isFollowing
               ? "bg-gray-100 text-gray-600 hover:bg-gray-200"
-              : "bg-blue-100 text-blue-600 hover:bg-blue-200"
+              : "bg-orange-100 text-orange-600 hover:bg-orange-200"
           } transition-colors`}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -785,7 +785,7 @@ const ProfilePage = () => {
   );
 
   return (
-    <div className="min-h-screen bg-blue-900">
+    <div className="min-h-screen bg-orange-900">
       <ProfileLayout
         profileUser={profileUser}
         isLoading={isLoading}
@@ -803,7 +803,7 @@ const ProfilePage = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`relative flex-1 py-3 text-center ${
                   activeTab === tab
-                    ? "text-blue-600 font-medium"
+                    ? "text-orange-600 font-medium"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
@@ -816,7 +816,7 @@ const ProfilePage = () => {
                 </span>
                 {activeTab === tab && (
                   <motion.div
-                    className="absolute bottom-0 left-0 h-0.5 bg-blue-600 w-full"
+                    className="absolute bottom-0 left-0 h-0.5 bg-orange-600 w-full"
                     layoutId="activeTab"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -832,7 +832,7 @@ const ProfilePage = () => {
         <div className="space-y-6">
           {contentLoading ? (
             <div className="flex justify-center items-center py-10">
-              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-orange-500"></div>
             </div>
           ) : (
             <>

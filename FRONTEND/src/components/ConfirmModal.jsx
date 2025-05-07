@@ -67,7 +67,7 @@ const ConfirmModal = ({
         />
       </svg>
     );
-    iconBgColor = "bg-teal-100 text-teal-600";
+    iconBgColor = "bg-orange-100 text-orange-600";
   }
 
   return (
@@ -81,7 +81,7 @@ const ConfirmModal = ({
           onClick={onClose}
         >
           <motion.div
-            className="bg-white rounded-2xl shadow-xl w-full max-w-md m-4 overflow-hidden border border-teal-100"
+            className="bg-white rounded-2xl shadow-xl w-full max-w-md m-4 overflow-hidden border border-orange-100"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
@@ -89,7 +89,7 @@ const ConfirmModal = ({
             onClick={handleModalClick}
           >
             {/* header */}
-            <div className="flex justify-between items-center p-4 border-b border-teal-100">
+            <div className="flex justify-between items-center p-4 border-b border-orange-100">
               <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
               <button
                 onClick={onClose}
@@ -112,7 +112,7 @@ const ConfirmModal = ({
             </div>
 
             {/* actions */}
-            <div className="flex justify-end gap-3 p-4 border-t border-teal-100 bg-gray-50">
+            <div className="flex justify-end gap-3 p-4 border-t border-orange-100 bg-gray-50">
               <motion.button
                 onClick={onClose}
                 className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors cursor-pointer"

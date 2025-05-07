@@ -25,10 +25,10 @@ const PostCard = ({
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-md border border-teal-100 mb-6 overflow-hidden">
+    <div className="bg-white rounded-2xl shadow-md border border-orange-100 mb-6 overflow-hidden">
       {/* Post Header */}
-      <div className="p-4 flex items-center space-x-3 border-b border-teal-100">
-        <div className="h-10 w-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white overflow-hidden">
+      <div className="p-4 flex items-center space-x-3 border-b border-orange-100">
+        <div className="h-10 w-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white overflow-hidden">
           <UserAvatar
             src={post.userProfileImage}
             alt={post.userName}
@@ -79,12 +79,12 @@ const PostCard = ({
         )}
 
         {/* Action Buttons */}
-        <div className="flex justify-between items-center mt-2 pb-2 border-b border-teal-100">
+        <div className="flex justify-between items-center mt-2 pb-2 border-b border-orange-100">
           <button
             className={`flex items-center space-x-1 px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
               isLikedByUser
                 ? "text-red-500 bg-red-50"
-                : "text-gray-600 hover:bg-teal-50"
+                : "text-gray-600 hover:bg-orange-50"
             }`}
             onClick={() => onLike(post.id)}
           >
@@ -93,7 +93,7 @@ const PostCard = ({
           </button>
 
           <button
-            className="flex items-center space-x-1 px-3 py-1.5 rounded-lg text-gray-600 hover:bg-teal-50 transition-colors cursor-pointer"
+            className="flex items-center space-x-1 px-3 py-1.5 rounded-lg text-gray-600 hover:bg-orange-50 transition-colors cursor-pointer"
             onClick={() => setShowComments(!showComments)}
           >
             <span className="text-lg">💬</span>

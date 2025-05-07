@@ -76,11 +76,11 @@ export default function LoginPage() {
             >
               <path
                 d="M20 4C26.4 4 31.7 7.3 35 12.5C31.7 17.7 26.4 21 20 21C13.6 21 8.3 17.7 5 12.5C8.3 7.3 13.6 4 20 4ZM20 19C22.1 19 24.1 18.3 25.6 17C27.2 15.7 28 14 28 12.5C28 11 27.2 9.3 25.6 8C24.1 6.7 22.1 6 20 6C17.9 6 15.9 6.7 14.4 8C12.8 9.3 12 11 12 12.5C12 14 12.8 15.7 14.4 17C15.9 18.3 17.9 19 20 19Z"
-                fill="#0D9488"
+                fill="#EA580C"
               />
               <path
                 d="M20 23C26.4 23 31.7 26.3 35 31.5C31.7 36.7 26.4 40 20 40C13.6 40 8.3 36.7 5 31.5C8.3 26.3 13.6 23 20 23ZM20 38C22.1 38 24.1 37.3 25.6 36C27.2 34.7 28 33 28 31.5C28 30 27.2 28.3 25.6 27C24.1 25.7 22.1 25 20 25C17.9 25 15.9 25.7 14.4 27C12.8 28.3 12 30 12 31.5C12 33 12.8 34.7 14.4 36C15.9 37.3 17.9 38 20 38Z"
-                fill="#2DD4BF"
+                fill="#F97316"
               />
             </svg>
           </div>
@@ -92,7 +92,7 @@ export default function LoginPage() {
             Don't have an account?{" "}
             <Link
               to="/register"
-              className="text-teal-600 hover:text-teal-800 font-medium"
+              className="text-orange-600 hover:text-orange-800 font-medium"
             >
               Create one
             </Link>
@@ -112,7 +112,7 @@ export default function LoginPage() {
                 placeholder="user@email.com"
                 className={`w-full h-12 px-4 border ${
                   errors.email ? "border-red-500" : "border-gray-200"
-                } rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors`}
+                } rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors`}
                 {...register("email", {
                   required: "Email is required",
                   pattern: {
@@ -141,7 +141,7 @@ export default function LoginPage() {
                 placeholder="••••••••"
                 className={`w-full h-12 px-4 border ${
                   errors.password ? "border-red-500" : "border-gray-200"
-                } rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors`}
+                } rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors`}
                 {...register("password", {
                   required: "Password is required",
                 })}
@@ -158,7 +158,7 @@ export default function LoginPage() {
                 <input
                   id="rememberMe"
                   type="checkbox"
-                  className="h-4 w-4 border-gray-200 rounded text-teal-600 focus:ring-teal-500"
+                  className="h-4 w-4 border-gray-200 rounded text-orange-600 focus:ring-orange-500"
                   {...register("rememberMe")}
                 />
                 <label htmlFor="rememberMe" className="text-sm text-gray-700">
@@ -168,7 +168,7 @@ export default function LoginPage() {
 
               <Link
                 to="/forgot-password"
-                className="text-sm text-teal-600 hover:text-teal-800 font-medium"
+                className="text-sm text-orange-600 hover:text-orange-800 font-medium"
               >
                 Forgot password?
               </Link>
@@ -177,7 +177,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 px-4 rounded-lg font-medium transition-colors disabled:opacity-70 disabled:cursor-not-allowed disabled:bg-teal-500"
+              className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 px-4 rounded-lg font-medium transition-colors disabled:opacity-70 disabled:cursor-not-allowed disabled:bg-orange-500"
             >
               {isSubmitting ? "Signing in..." : "Sign in"}
             </button>

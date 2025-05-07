@@ -35,7 +35,7 @@ const ProfileLayout = ({
         <Header />
         <div className="max-w-6xl mx-auto px-4 pt-20 pb-10">
           <div className="flex justify-center items-center py-20">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-500"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
           </div>
         </div>
       </div>
@@ -45,11 +45,11 @@ const ProfileLayout = ({
   return (
     <div className="min-h-screen bg-blue-50">
       {/* Profile Header with Cover */}
-      <div className="w-full bg-gradient-to-r from-teal-400 to-teal-600 h-48 relative">
-        <div className="max-w-6xl mx-auto px-4 h-full relative bg-teal-500">
+      <div className="w-full bg-gradient-to-r from-orange-400 to-orange-600 h-48 relative">
+        <div className="max-w-6xl mx-auto px-4 h-full relative bg-orange-500">
           <button
             onClick={goBack}
-            className="absolute left-4 top-4 z-10 p-2 bg-white rounded-full hover:bg-teal-50 transition-all text-gray-800 cursor-pointer"
+            className="absolute left-4 top-4 z-10 p-2 bg-white rounded-full hover:bg-orange-50 transition-all text-gray-800 cursor-pointer"
           >
             <ArrowLeft size={20} />
           </button>
@@ -59,7 +59,7 @@ const ProfileLayout = ({
       <div className="max-w-6xl mx-auto px-4 -mt-16 relative">
         {/* Main Content */}
         <motion.div
-          className="bg-white rounded-2xl shadow-md border border-teal-100 p-6 mb-6"
+          className="bg-white rounded-2xl shadow-md border border-orange-100 p-6 mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isAnimated ? 1 : 0, y: isAnimated ? 0 : 20 }}
           transition={{ duration: 0.5 }}
@@ -101,8 +101,8 @@ const ProfileLayout = ({
           </div>
 
           {/* Stats Row */}
-          <div className="mt-6 grid grid-cols-3 gap-4 border-t border-teal-200 pt-4">
-            <button className="flex flex-col items-center py-2 hover:bg-teal-50 rounded-lg transition-colors">
+          <div className="mt-6 grid grid-cols-3 gap-4 border-t border-orange-200 pt-4">
+            <button className="flex flex-col items-center py-2 hover:bg-orange-50 rounded-lg transition-colors">
               <span className="text-lg font-bold text-gray-800">
                 {totalPostCount || 0}
               </span>
@@ -111,7 +111,7 @@ const ProfileLayout = ({
 
             <button
               onClick={onShowFollowers}
-              className="flex flex-col items-center py-2 hover:bg-teal-50 rounded-lg transition-colors"
+              className="flex flex-col items-center py-2 hover:bg-orange-50 rounded-lg transition-colors"
             >
               <span className="text-lg font-bold text-gray-800">
                 {profileUser?.followedUsers?.length || 0}
@@ -121,7 +121,7 @@ const ProfileLayout = ({
 
             <button
               onClick={onShowFollowing}
-              className="flex flex-col items-center py-2 hover:bg-teal-50 rounded-lg transition-colors"
+              className="flex flex-col items-center py-2 hover:bg-orange-50 rounded-lg transition-colors"
             >
               <span className="text-lg font-bold text-gray-800">
                 {profileUser?.followingUsers?.length || 0}
@@ -132,13 +132,13 @@ const ProfileLayout = ({
 
           {/* Skills Tags */}
           {profileUser?.skills && profileUser.skills.length > 0 && (
-            <div className="mt-4 border-t border-teal-200 pt-4">
+            <div className="mt-4 border-t border-orange-200 pt-4">
               <p className="text-sm font-medium text-gray-700 mb-2">Skills</p>
               <div className="flex flex-wrap gap-2">
                 {profileUser.skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm"
+                    className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm"
                   >
                     {skill}
                   </span>

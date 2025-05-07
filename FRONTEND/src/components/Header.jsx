@@ -235,7 +235,7 @@ const Header = () => {
                         notifications.map((notification, index) => (
                           <motion.div
                             key={notification.id}
-                            className={`p-3 border-b border-teal-100 hover:bg-white-900 cursor-pointer ${
+                            className={`p-3 border-b border-orange-100 hover:bg-white-900 cursor-pointer ${
                               !notification.read ? "bg-orange-50" : ""
                             }`}
                             onClick={() => markAsRead(notification.id)}
@@ -288,7 +288,7 @@ const Header = () => {
               <AnimatePresence>
                 {showProfileDropdown && (
                   <motion.div
-                    className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg overflow-hidden z-50 border border-teal-100"
+                    className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg overflow-hidden z-50 border border-orange-100"
                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}

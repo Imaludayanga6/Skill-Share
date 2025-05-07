@@ -15,7 +15,7 @@ const STATUS_OPTIONS = [
   {
     id: "in_progress",
     name: "In Progress",
-    color: "bg-teal-100 text-teal-800",
+    color: "bg-orange-100 text-orange-800",
   },
   { id: "completed", name: "Completed", color: "bg-green-100 text-green-800" },
 ];
@@ -128,13 +128,13 @@ const EditLearningProgressModal = ({
   return (
     <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
       <motion.div
-        className="bg-white rounded-2xl shadow-xl w-full max-w-md m-4 overflow-hidden border border-teal-100"
+        className="bg-white rounded-2xl shadow-xl w-full max-w-md m-4 overflow-hidden border border-orange-100"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.9 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="flex justify-between items-center p-4 border-b border-teal-100">
+        <div className="flex justify-between items-center p-4 border-b border-orange-100">
           <h3 className="text-lg font-semibold text-gray-800">
             Edit Learning Progress
           </h3>
@@ -156,7 +156,7 @@ const EditLearningProgressModal = ({
               <select
                 value={selectedTemplate}
                 onChange={handleTemplateChange}
-                className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors"
+                className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors"
                 disabled={isSubmitting}
               >
                 {TEMPLATES.map((template) => (
@@ -175,7 +175,7 @@ const EditLearningProgressModal = ({
               <select
                 value={selectedStatus}
                 onChange={handleStatusChange}
-                className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors"
+                className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors"
                 disabled={isSubmitting}
               >
                 {STATUS_OPTIONS.map((status) => (
@@ -200,7 +200,7 @@ const EditLearningProgressModal = ({
                   placeholder="Give your progress update a clear title"
                   className={`w-full p-2 bg-white rounded-lg border ${
                     errors.title ? "border-red-500" : "border-gray-200"
-                  } focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors`}
+                  } focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors`}
                   disabled={isSubmitting}
                 />
                 {errors.title && (
@@ -226,7 +226,7 @@ const EditLearningProgressModal = ({
                   rows="3"
                   className={`w-full p-2 bg-white rounded-lg border ${
                     errors.description ? "border-red-500" : "border-gray-200"
-                  } focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors`}
+                  } focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors`}
                   disabled={isSubmitting}
                 />
                 {errors.description && (
@@ -252,7 +252,7 @@ const EditLearningProgressModal = ({
                   placeholder="Name of the tutorial you completed"
                   className={`w-full p-2 bg-white rounded-lg border ${
                     errors.tutorialName ? "border-red-500" : "border-gray-200"
-                  } focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors`}
+                  } focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors`}
                   disabled={isSubmitting}
                 />
                 {errors.tutorialName && (
@@ -278,7 +278,7 @@ const EditLearningProgressModal = ({
                   placeholder="Name of your project"
                   className={`w-full p-2 bg-white rounded-lg border ${
                     errors.projectName ? "border-red-500" : "border-gray-200"
-                  } focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors`}
+                  } focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors`}
                   disabled={isSubmitting}
                 />
                 {errors.projectName && (
@@ -298,7 +298,7 @@ const EditLearningProgressModal = ({
                   type="text"
                   {...register("skillsLearned")}
                   placeholder="Skills or technologies you learned (comma-separated)"
-                  className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors"
+                  className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors"
                   disabled={isSubmitting}
                 />
               </div>
@@ -313,7 +313,7 @@ const EditLearningProgressModal = ({
                   {...register("challenges")}
                   placeholder="What challenges did you encounter and how did you overcome them?"
                   rows="2"
-                  className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors"
+                  className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors"
                   disabled={isSubmitting}
                 />
               </div>
@@ -328,7 +328,7 @@ const EditLearningProgressModal = ({
                   {...register("nextSteps")}
                   placeholder="What are your next steps or goals?"
                   rows="2"
-                  className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors"
+                  className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors"
                   disabled={isSubmitting}
                 />
               </div>
@@ -348,7 +348,7 @@ const EditLearningProgressModal = ({
             </motion.button>
             <motion.button
               type="submit"
-              className="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors disabled:bg-teal-300 cursor-pointer"
+              className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:bg-orange-300 cursor-pointer"
               whileHover={{ scale: isSubmitting ? 1 : 1.03 }}
               whileTap={{ scale: isSubmitting ? 1 : 0.97 }}
               disabled={isSubmitting}

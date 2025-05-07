@@ -186,7 +186,7 @@ const SkillSharingFeed = () => {
       {loading ? (
         <div className="flex justify-center items-center my-12">
           <motion.div
-            className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-500"
+            className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
@@ -194,7 +194,7 @@ const SkillSharingFeed = () => {
         </div>
       ) : posts.length === 0 ? (
         <motion.div
-          className="bg-white rounded-2xl shadow-lg p-8 text-center border border-teal-100"
+          className="bg-white rounded-2xl shadow-lg p-8 text-center border border-orange-100"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -211,7 +211,7 @@ const SkillSharingFeed = () => {
           {posts.map((post, index) => (
             <motion.div
               key={post.id}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden border border-teal-100"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden border border-orange-100"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -221,9 +221,9 @@ const SkillSharingFeed = () => {
               }}
             >
               {/* Post Header */}
-              <div className="p-6 flex items-center justify-between border-b border-teal-100">
+              <div className="p-6 flex items-center justify-between border-b border-orange-100">
                 <div className="flex items-center space-x-4">
-                  <div className="h-12 w-12 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white overflow-hidden">
+                  <div className="h-12 w-12 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white overflow-hidden">
                     {post.userProfileImage ? (
                       <img
                         src={post.userProfileImage}
@@ -238,7 +238,7 @@ const SkillSharingFeed = () => {
                   </div>
                   <div>
                     <Link to={`/profile/${post.userId}`} target="_blank">
-                      <h3 className="font-semibold text-gray-800 hover:text-teal-600 transition-colors">
+                      <h3 className="font-semibold text-gray-800 hover:text-orange-600 transition-colors">
                         {post.userName}
                       </h3>
                     </Link>
@@ -253,7 +253,7 @@ const SkillSharingFeed = () => {
                   <div className="flex space-x-3">
                     <motion.button
                       onClick={() => setEditingPost(post)}
-                      className="text-teal-500 hover:text-teal-700 p-2 rounded-full hover:bg-teal-50 transition-colors"
+                      className="text-orange-500 hover:text-orange-700 p-2 rounded-full hover:bg-orange-50 transition-colors"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                     >
@@ -326,14 +326,14 @@ const SkillSharingFeed = () => {
                   </div>
                 )}
                 {/* Action Buttons */}
-                <div className="flex justify-between items-center mt-4 pb-4 border-b border-teal-100">
+                <div className="flex justify-between items-center mt-4 pb-4 border-b border-orange-100">
                   <motion.button
                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
                       post.likes?.some(
                         (like) => like.userId === currentUser?.id
                       )
                         ? "text-red-500 bg-red-50"
-                        : "text-gray-600 hover:bg-teal-50"
+                        : "text-gray-600 hover:bg-orange-50"
                     }`}
                     onClick={() => handleLike(post.id)}
                     whileHover={{ scale: 1.05 }}
@@ -355,7 +355,7 @@ const SkillSharingFeed = () => {
                   </motion.button>
 
                   <motion.button
-                    className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:bg-teal-50 transition-colors"
+                    className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:bg-orange-50 transition-colors"
                     onClick={() => toggleComments(post.id)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

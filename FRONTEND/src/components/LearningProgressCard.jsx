@@ -8,7 +8,7 @@ import UserAvatar from "./UserAvatar";
 
 const STATUS_OPTIONS = {
   not_started: { name: "Not Started", color: "bg-gray-100 text-gray-800" },
-  in_progress: { name: "In Progress", color: "bg-teal-100 text-teal-800" },
+  in_progress: { name: "In Progress", color: "bg-orange-100 text-orange-800" },
   completed: { name: "Completed", color: "bg-green-100 text-green-800" },
 };
 
@@ -68,11 +68,11 @@ const LearningProgressCard = ({
 
   
   return (
-    <div className="bg-white rounded-2xl shadow-md border border-teal-100 mb-6 overflow-hidden">
+    <div className="bg-white rounded-2xl shadow-md border border-orange-100 mb-6 overflow-hidden">
       {/* Progress Header */}
-      <div className="p-4 flex items-center justify-between border-b border-teal-100">
+      <div className="p-4 flex items-center justify-between border-b border-orange-100">
         <div className="flex items-center space-x-3">
-          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white overflow-hidden">
+          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white overflow-hidden">
             <UserAvatar
               src={progress.userProfileImage}
               alt={progress.userName}
@@ -89,7 +89,7 @@ const LearningProgressCard = ({
         </div>
 
         <div className="flex items-center space-x-2">
-          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-teal-100 text-teal-800">
+          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
             {templateInfo.icon} {templateInfo.name}
           </span>
           <span
@@ -102,7 +102,7 @@ const LearningProgressCard = ({
             <div className="flex space-x-1 ml-2">
               <motion.button
                 onClick={() => onEdit(progress)}
-                className="p-1 rounded-full hover:bg-teal-50 text-teal-600 cursor-pointer"
+                className="p-1 rounded-full hover:bg-orange-50 text-orange-600 cursor-pointer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -153,7 +153,7 @@ const LearningProgressCard = ({
                 {progress.skillsLearned.split(",").map((skill, index) => (
                   <span
                     key={index}
-                    className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-teal-100 text-teal-800"
+                    className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-800"
                   >
                     {skill.trim()}
                   </span>
@@ -182,12 +182,12 @@ const LearningProgressCard = ({
         </div>
 
         {/* Action Buttons */}
-        <div className="flex justify-between items-center mt-2 pb-2 border-b border-teal-100">
+        <div className="flex justify-between items-center mt-2 pb-2 border-b border-orange-100">
           <button
             className={`flex items-center space-x-1 px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
               isLikedByUser
                 ? "text-red-500 bg-red-50"
-                : "text-gray-600 hover:bg-teal-50"
+                : "text-gray-600 hover:bg-orange-50"
             }`}
             onClick={() => onLike(progress.id)}
           >
@@ -196,7 +196,7 @@ const LearningProgressCard = ({
           </button>
 
           <button
-            className="flex items-center space-x-1 px-3 py-1.5 rounded-lg text-gray-600 hover:bg-teal-50 transition-colors cursor-pointer"
+            className="flex items-center space-x-1 px-3 py-1.5 rounded-lg text-gray-600 hover:bg-orange-50 transition-colors cursor-pointer"
             onClick={() => setShowComments(!showComments)}
           >
             <span className="text-lg">💬</span>

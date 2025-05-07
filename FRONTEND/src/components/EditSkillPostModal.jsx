@@ -150,13 +150,13 @@ const EditPostModal = ({ post, onClose, onPostUpdated, token }) => {
   return (
     <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
       <motion.div
-        className="bg-white rounded-2xl shadow-xl w-full max-w-md m-4 overflow-hidden border border-teal-100"
+        className="bg-white rounded-2xl shadow-xl w-full max-w-md m-4 overflow-hidden border border-orange-100"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.9 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="flex justify-between items-center p-4 border-b border-teal-100">
+        <div className="flex justify-between items-center p-4 border-b border-orange-100">
           <h3 className="text-lg font-semibold text-gray-800">Edit Post</h3>
           <button
             onClick={onClose}
@@ -171,7 +171,7 @@ const EditPostModal = ({ post, onClose, onPostUpdated, token }) => {
             <textarea
               className={`w-full p-3 bg-white rounded-lg border ${
                 errors.description ? "border-red-500" : "border-gray-200"
-              } focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors`}
+              } focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors`}
               placeholder="Share your skills or what you're learning..."
               rows="4"
               {...register("description", {
@@ -192,18 +192,18 @@ const EditPostModal = ({ post, onClose, onPostUpdated, token }) => {
 
             {/* Existing media info */}
             {existingMediaCount > 0 && !replaceMedia ? (
-              <div className="mb-3 p-3 bg-teal-50 rounded border border-teal-100 flex items-center">
+              <div className="mb-3 p-3 bg-orange-50 rounded border border-orange-100 flex items-center">
                 {existingMediaType === "video" ? (
-                  <Video className="text-teal-500 mr-2" size={20} />
+                  <Video className="text-orange-500 mr-2" size={20} />
                 ) : (
-                  <Image className="text-teal-500 mr-2" size={20} />
+                  <Image className="text-orange-500 mr-2" size={20} />
                 )}
                 <div>
-                  <p className="text-sm text-teal-700">
+                  <p className="text-sm text-orange-700">
                     Currently has {existingMediaCount} {existingMediaType}
                     {existingMediaCount > 1 ? "s" : ""}
                   </p>
-                  <p className="text-xs text-teal-500 mt-1">
+                  <p className="text-xs text-orange-500 mt-1">
                     Upload new files below to replace existing media
                   </p>
                 </div>
@@ -212,12 +212,12 @@ const EditPostModal = ({ post, onClose, onPostUpdated, token }) => {
 
             {/* New media status */}
             {replaceMedia && (
-              <div className="mb-3 p-3 bg-teal-50 rounded border border-teal-100">
-                <p className="text-sm text-teal-700 flex items-center">
+              <div className="mb-3 p-3 bg-orange-50 rounded border border-orange-100">
+                <p className="text-sm text-orange-700 flex items-center">
                   {mediaType === "video" ? (
-                    <Video className="text-teal-500 mr-2" size={18} />
+                    <Video className="text-orange-500 mr-2" size={18} />
                   ) : (
-                    <Image className="text-teal-500 mr-2" size={18} />
+                    <Image className="text-orange-500 mr-2" size={18} />
                   )}
                   {newMedia.length} new {mediaType}
                   {newMedia.length > 1 ? "s" : ""} ready to upload
@@ -238,9 +238,9 @@ const EditPostModal = ({ post, onClose, onPostUpdated, token }) => {
 
             {/* File upload */}
             {isProcessingFiles ? (
-              <div className="flex justify-center items-center h-20 bg-white rounded-lg border border-teal-100">
+              <div className="flex justify-center items-center h-20 bg-white rounded-lg border border-orange-100">
                 <div className="flex flex-col items-center">
-                  <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-teal-500 mb-2"></div>
+                  <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-orange-500 mb-2"></div>
                   <p className="text-gray-600 text-sm">Processing files...</p>
                 </div>
               </div>
@@ -249,12 +249,12 @@ const EditPostModal = ({ post, onClose, onPostUpdated, token }) => {
                 className={`flex flex-col items-center justify-center h-24 border-2 border-dashed rounded-lg transition-all duration-200 ${
                   isSubmitting || isProcessingFiles
                     ? "border-gray-200 bg-gray-100 cursor-not-allowed"
-                    : "border-teal-300 bg-teal-50 cursor-pointer hover:bg-teal-100"
+                    : "border-orange-300 bg-orange-50 cursor-pointer hover:bg-orange-100"
                 }`}
               >
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                   <svg
-                    className="w-8 h-8 mb-2 text-teal-500"
+                    className="w-8 h-8 mb-2 text-orange-500"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -268,11 +268,11 @@ const EditPostModal = ({ post, onClose, onPostUpdated, token }) => {
                       d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                     />
                   </svg>
-                  <p className="mb-1 text-sm text-teal-500">
+                  <p className="mb-1 text-sm text-orange-500">
                     <span className="font-semibold">Click to upload</span> or
                     drag and drop
                   </p>
-                  <p className="text-xs text-teal-400">
+                  <p className="text-xs text-orange-400">
                     Images (JPG, PNG, GIF) or Videos (MP4, WebM) up to 30
                     seconds
                   </p>
@@ -302,7 +302,7 @@ const EditPostModal = ({ post, onClose, onPostUpdated, token }) => {
             </motion.button>
             <motion.button
               type="submit"
-              className="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors disabled:bg-teal-300 cursor-pointer"
+              className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:bg-orange-300 cursor-pointer"
               whileHover={{
                 scale: isSubmitting || isProcessingFiles ? 1 : 1.05,
               }}

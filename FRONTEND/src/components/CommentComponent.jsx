@@ -57,14 +57,14 @@ export const CommentForm = ({ postId, onAddComment, currentUser }) => {
         type="text"
         placeholder="Add a comment..."
         className={`flex-grow px-4 py-2 rounded-l-lg border border-gray-200 bg-white focus:ring-2 ${
-          errors.commentText ? "focus:ring-red-500" : "focus:ring-teal-500"
+          errors.commentText ? "focus:ring-red-500" : "focus:ring-orange-500"
         } focus:outline-none transition-colors`}
         {...register("commentText", { required: true })}
         disabled={isSubmitting}
       />
       <motion.button
         type="submit"
-        className="px-4 py-2 bg-teal-600 text-white rounded-r-lg hover:bg-teal-700 transition-colors disabled:bg-teal-300 cursor-pointer"
+        className="px-4 py-2 bg-orange-600 text-white rounded-r-lg hover:bg-orange-700 transition-colors disabled:bg-orange-300 cursor-pointer"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         disabled={isSubmitting}
@@ -188,18 +188,18 @@ const Comment = ({
   return (
     <>
       <motion.div
-        className="flex space-x-2 p-2 rounded-lg hover:bg-teal-50"
+        className="flex space-x-2 p-2 rounded-lg hover:bg-orange-50"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="h-8 w-8 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white flex-shrink-0 overflow-hidden">
+        <div className="h-8 w-8 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white flex-shrink-0 overflow-hidden">
           <UserAvatar
             src={comment.userProfileImage}
             alt={comment.userName}
             name={comment.userName}
             size="h-8 w-8"
-            className="from-teal-400 to-teal-600 flex-shrink-0"
+            className="from-orange-400 to-orange-600 flex-shrink-0"
           />
         </div>
 
@@ -214,7 +214,7 @@ const Comment = ({
                 {comment.userId === currentUser?.id && (
                   <motion.button
                     onClick={() => setIsEditing(true)}
-                    className="text-xs text-teal-500 hover:text-teal-700 cursor-pointer"
+                    className="text-xs text-orange-500 hover:text-orange-700 cursor-pointer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     disabled={isEditing || isDeleting}
@@ -240,12 +240,12 @@ const Comment = ({
               <div className="flex">
                 <input
                   type="text"
-                  className="flex-grow text-sm px-2 py-1 rounded-l-md border border-gray-200 bg-white focus:ring-2 focus:ring-teal-500 transition-colors"
+                  className="flex-grow text-sm px-2 py-1 rounded-l-md border border-gray-200 bg-white focus:ring-2 focus:ring-orange-500 transition-colors"
                   {...register("updatedContent", { required: true })}
                 />
                 <button
                   type="submit"
-                  className="px-2 py-1 bg-teal-600 text-white text-sm rounded-r-md hover:bg-teal-700 cursor-pointer transition-colors"
+                  className="px-2 py-1 bg-orange-600 text-white text-sm rounded-r-md hover:bg-orange-700 cursor-pointer transition-colors"
                 >
                   Save
                 </button>

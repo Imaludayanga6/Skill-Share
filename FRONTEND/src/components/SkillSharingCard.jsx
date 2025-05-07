@@ -56,7 +56,7 @@ const SkillSharingCard = ({
 
   return (
     <motion.div
-      className="bg-white rounded-2xl shadow-md border border-teal-100 overflow-hidden"
+      className="bg-white rounded-2xl shadow-md border border-orange-100 overflow-hidden"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -66,12 +66,12 @@ const SkillSharingCard = ({
       }}
     >
       {/* Post Header */}
-      <div className="p-4 flex items-center justify-between border-b border-teal-100">
+      <div className="p-4 flex items-center justify-between border-b border-orange-100">
         <div
           className="flex items-center space-x-3 cursor-pointer"
           onClick={handleUserClick}
         >
-          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white overflow-hidden">
+          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white overflow-hidden">
             <UserAvatar
               src={post.userProfileImage}
               alt={post.userName}
@@ -91,7 +91,7 @@ const SkillSharingCard = ({
           <div className="flex space-x-2">
             <motion.button
               onClick={() => setShowEditModal(true)}
-              className="text-teal-600 hover:text-teal-700 p-1 cursor-pointer"
+              className="text-orange-600 hover:text-orange-700 p-1 cursor-pointer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -173,12 +173,12 @@ const SkillSharingCard = ({
         )}
 
         {/* Action Buttons */}
-        <div className="flex justify-between items-center mt-2 pb-2 border-b border-teal-100">
+        <div className="flex justify-between items-center mt-2 pb-2 border-b border-orange-100">
           <motion.button
             className={`flex items-center space-x-1 px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
               isLikedByUser
                 ? "text-red-500 bg-red-50"
-                : "text-gray-600 hover:bg-teal-50"
+                : "text-gray-600 hover:bg-orange-50"
             }`}
             onClick={() => onLike(post.id)}
             whileHover={{ scale: 1.05 }}
@@ -189,7 +189,7 @@ const SkillSharingCard = ({
           </motion.button>
 
           <motion.button
-            className="flex items-center space-x-1 px-3 py-1.5 rounded-lg text-gray-600 hover:bg-teal-50 transition-colors cursor-pointer"
+            className="flex items-center space-x-1 px-3 py-1.5 rounded-lg text-gray-600 hover:bg-orange-50 transition-colors cursor-pointer"
             onClick={() => setShowComments(!showComments)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

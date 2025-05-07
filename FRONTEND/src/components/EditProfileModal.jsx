@@ -97,13 +97,13 @@ const EditProfileModal = ({ user, onClose, onProfileUpdated, token }) => {
   return (
     <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
       <motion.div
-        className="bg-white rounded-2xl shadow-xl w-full max-w-md m-4 overflow-hidden border border-teal-100"
+        className="bg-white rounded-2xl shadow-xl w-full max-w-md m-4 overflow-hidden border border-orange-100"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.9 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="flex justify-between items-center p-4 border-b border-teal-100">
+        <div className="flex justify-between items-center p-4 border-b border-orange-100">
           <h3 className="text-lg font-semibold text-gray-800">Edit Profile</h3>
           <button
             onClick={onClose}
@@ -132,7 +132,7 @@ const EditProfileModal = ({ user, onClose, onProfileUpdated, token }) => {
               </div>
 
               <div className="absolute -bottom-2 -right-2 flex space-x-1">
-                <label className="p-2 bg-teal-600 rounded-full text-white cursor-pointer hover:bg-teal-700 transition-colors">
+                <label className="p-2 bg-orange-600 rounded-full text-white cursor-pointer hover:bg-orange-700 transition-colors">
                   <Camera size={18} />
                   <input
                     type="file"
@@ -169,7 +169,7 @@ const EditProfileModal = ({ user, onClose, onProfileUpdated, token }) => {
               {...register("name", { required: "Name is required" })}
               className={`w-full p-2 bg-white rounded-lg border ${
                 errors.name ? "border-red-500" : "border-gray-200"
-              } focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors`}
+              } focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors`}
               disabled={isSubmitting}
             />
             {errors.name && (
@@ -185,7 +185,7 @@ const EditProfileModal = ({ user, onClose, onProfileUpdated, token }) => {
             <textarea
               {...register("bio")}
               rows="3"
-              className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none resize-none transition-colors"
+              className="w-full p-2 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none resize-none transition-colors"
               placeholder="Tell us a bit about yourself"
               disabled={isSubmitting}
             />
@@ -201,7 +201,7 @@ const EditProfileModal = ({ user, onClose, onProfileUpdated, token }) => {
                 type="text"
                 value={skillInput}
                 onChange={(e) => setSkillInput(e.target.value)}
-                className="flex-grow p-2 bg-white rounded-l-lg border border-gray-200 focus:ring-2 focus:ring-teal-500 focus:outline-none transition-colors"
+                className="flex-grow p-2 bg-white rounded-l-lg border border-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none transition-colors"
                 placeholder="Add a skill (e.g., JavaScript, Design)"
                 disabled={isSubmitting}
                 onKeyDown={(e) => {
@@ -214,7 +214,7 @@ const EditProfileModal = ({ user, onClose, onProfileUpdated, token }) => {
               <button
                 type="button"
                 onClick={handleAddSkill}
-                className="px-4 py-2 bg-teal-600 text-white rounded-r-lg hover:bg-teal-700 transition-colors disabled:bg-teal-300 cursor-pointer"
+                className="px-4 py-2 bg-orange-600 text-white rounded-r-lg hover:bg-orange-700 transition-colors disabled:bg-orange-300 cursor-pointer"
                 disabled={isSubmitting || !skillInput.trim()}
               >
                 Add
@@ -227,7 +227,7 @@ const EditProfileModal = ({ user, onClose, onProfileUpdated, token }) => {
                 {skills.map((skill, index) => (
                   <motion.span
                     key={index}
-                    className="flex items-center space-x-1 px-3 py-1 bg-teal-100 text-teal-800 rounded-full"
+                    className="flex items-center space-x-1 px-3 py-1 bg-orange-100 text-orange-800 rounded-full"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
@@ -237,7 +237,7 @@ const EditProfileModal = ({ user, onClose, onProfileUpdated, token }) => {
                     <button
                       type="button"
                       onClick={() => handleRemoveSkill(skill)}
-                      className="text-teal-600 hover:text-teal-800"
+                      className="text-orange-600 hover:text-orange-800"
                       disabled={isSubmitting}
                     >
                       <X size={14} />
@@ -248,7 +248,7 @@ const EditProfileModal = ({ user, onClose, onProfileUpdated, token }) => {
             )}
           </div>
 
-          <div className="flex justify-end space-x-3 mt-6 pt-4 border-t border-teal-100">
+          <div className="flex justify-end space-x-3 mt-6 pt-4 border-t border-orange-100">
             <motion.button
               type="button"
               onClick={onClose}
@@ -261,7 +261,7 @@ const EditProfileModal = ({ user, onClose, onProfileUpdated, token }) => {
             </motion.button>
             <motion.button
               type="submit"
-              className="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors disabled:bg-teal-300 cursor-pointer"
+              className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:bg-orange-300 cursor-pointer"
               whileHover={{ scale: isSubmitting ? 1 : 1.03 }}
               whileTap={{ scale: isSubmitting ? 1 : 0.97 }}
               disabled={isSubmitting}

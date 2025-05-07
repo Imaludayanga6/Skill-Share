@@ -15,15 +15,15 @@ const TabNavigation = ({ activeTab = "feed" }) => {
   ];
 
   return (
-    <div className="bg-white rounded-lg p-1 flex justify-between shadow-sm border border-teal-100">
+    <div className="bg-white rounded-lg p-1 flex justify-between shadow-sm border border-orange-100">
       {tabs.map((tab) => (
         <button
           key={tab.id}
           onClick={() => handleTabChange(tab.id)}
           className={`flex-1 py-2.5 px-4 rounded-lg flex items-center justify-center space-x-2 transition-all ${
             active === tab.id
-              ? "bg-teal-50 text-teal-600 shadow-sm"
-              : "text-gray-600 hover:bg-teal-50"
+              ? "bg-orange-50 text-orange-600 shadow-sm"
+              : "text-gray-600 hover:bg-orange-50"
           }`}
         >
           <span>{tab.icon}</span>

@@ -21,7 +21,7 @@ const UserAvatar = ({ src, alt, name, size = "h-10 w-10", className = "" }) => {
     return "text-xs";
   };
 
-  const baseClasses = `rounded-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-teal-400 to-teal-600 ${size} ${className}`;
+  const baseClasses = `rounded-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-orange-400 to-orange-600 ${size} ${className}`;
 
   return (
     <div className={baseClasses}>
