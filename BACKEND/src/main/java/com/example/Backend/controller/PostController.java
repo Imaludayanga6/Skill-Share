@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.Backend.model.Comment;
-
 import com.example.Backend.model.Like;
 import com.example.Backend.model.Post;
 import com.example.Backend.service.PostService;
@@ -80,15 +79,15 @@ public class PostController {
         return new ResponseEntity<>(updatedPost, HttpStatus.CREATED);
     }
 
-    // Update a comments
-    // @PutMapping("/{postId}/comments/{commentId}")
-    // public ResponseEntity<Post> updateComment(
-    //         @PathVariable String postId,
-    //         @PathVariable String commentId,
-    //         @RequestBody Comment comment) {
-    //     Post updatedPost = postService.updateComment(postId, commentId, comment);
-    //     return new ResponseEntity<>(updatedPost, HttpStatus.OK);
-    // }
+    // Update a comment
+    @PutMapping("/{postId}/comments/{commentId}")
+    public ResponseEntity<Post> updateComment(
+            @PathVariable String postId,
+            @PathVariable String commentId,
+            @RequestBody Comment comment) {
+        Post updatedPost = postService.updateComment(postId, commentId, comment);
+        return new ResponseEntity<>(updatedPost, HttpStatus.OK);
+    }
 
     // Delete a comment
     @DeleteMapping("/{postId}/comments/{commentId}")
