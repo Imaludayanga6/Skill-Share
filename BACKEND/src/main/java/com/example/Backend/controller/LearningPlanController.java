@@ -77,14 +77,14 @@ public class LearningPlanController {
     }
 
     // Update a comments
-    // @PutMapping("/{planId}/comments/{commentId}")
-    // public ResponseEntity<LearningPlan> updateComment(
-    //         @PathVariable String planId,
-    //         @PathVariable String commentId,
-    //         @RequestBody Comment comment) {
-    //     LearningPlan updated = learningPlanService.updateComment(planId, commentId, comment);
-    //     return new ResponseEntity<>(updated, HttpStatus.OK);
-    // }
+    @PutMapping("/{planId}/comments/{commentId}")
+    public ResponseEntity<LearningPlan> updateComment(
+            @PathVariable String planId,
+            @PathVariable String commentId,
+            @RequestBody Comment comment) {
+        LearningPlan updated = learningPlanService.updateComment(planId, commentId, comment);
+        return new ResponseEntity<>(updated, HttpStatus.OK);
+    }
 
     // Delete a comment
     @DeleteMapping("/{planId}/comments/{commentId}")

@@ -66,18 +66,18 @@ public class PostController {
     }
 
     // Delete a post
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePost(@PathVariable String id) {
-        postService.deletePost(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    // @DeleteMapping("/{id}")
+    // public ResponseEntity<Void> deletePost(@PathVariable String id) {
+    //     postService.deletePost(id);
+    //     return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     // Add a comment to a post
-    @PostMapping("/{postId}/comments")
-    public ResponseEntity<Post> addComment(@PathVariable String postId, @RequestBody Comment comment) {
-        Post updatedPost = postService.addComment(postId, comment);
-        return new ResponseEntity<>(updatedPost, HttpStatus.CREATED);
-    }
+    // @PostMapping("/{postId}/comments")
+    // public ResponseEntity<Post> addComment(@PathVariable String postId, @RequestBody Comment comment) {
+    //     Post updatedPost = postService.addComment(postId, comment);
+    //     return new ResponseEntity<>(updatedPost, HttpStatus.CREATED);
+    // }
 
     // Update a comment
     @PutMapping("/{postId}/comments/{commentId}")
