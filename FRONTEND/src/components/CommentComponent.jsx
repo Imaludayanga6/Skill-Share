@@ -55,7 +55,7 @@ export const CommentForm = ({ postId, onAddComment, currentUser }) => {
     <form onSubmit={handleSubmit(onSubmit)} className="flex">
       <input
         type="text"
-        placeholder="Add a comment..."
+        placeholder="Add a comments...."
         className={`flex-grow px-4 py-2 rounded-l-lg border border-gray-200 bg-white focus:ring-2 ${
           errors.commentText ? "focus:ring-red-500" : "focus:ring-teal-500"
         } focus:outline-none transition-colors`}
