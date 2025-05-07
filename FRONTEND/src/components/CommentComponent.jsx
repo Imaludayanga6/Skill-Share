@@ -211,7 +211,7 @@ const Comment = ({
             {(comment.userId === currentUser?.id ||
               postUserId === currentUser?.id) && (
               <div className="flex space-x-2">
-                {/* {comment.userId === currentUser?.id && (
+                {comment.userId === currentUser?.id && (
                   <motion.button
                     onClick={() => setIsEditing(true)}
                     className="text-xs text-teal-500 hover:text-teal-700 cursor-pointer"
@@ -221,7 +221,7 @@ const Comment = ({
                   >
                     <Edit size={14} />
                   </motion.button>
-                )} */}
+                )}
                 <motion.button
                   onClick={handleDelete}
                   className="text-xs text-red-500 hover:text-red-700 cursor-pointer"
