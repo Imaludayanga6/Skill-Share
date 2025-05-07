@@ -687,7 +687,7 @@ const ProfilePage = () => {
       );
 
       // Show feedback toast
-      toast.success(isLiked ? "Plan unlike" : "Plan liked");
+      toast.success(isLiked ? "Plan Unlike" : "Plan liked");
     } catch (error) {
       console.error("Error toggling plan like:", error);
       toast.error("Failed to process like");
