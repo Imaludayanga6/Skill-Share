@@ -36,7 +36,7 @@ const SkillSharingCard = ({
     try {
       return await onComment(postId, commentData);
     } catch (error) {
-      console.error("Error adding comment:", error);
+      console.error("Error adding Comment:", error);
       return false;
     }
   };
@@ -172,7 +172,7 @@ const SkillSharingCard = ({
           </div>
         )}
 
-        {/* Action Buttons */}
+        {/* Action buttons */}
         <div className="flex justify-between items-center mt-2 pb-2 border-b border-teal-100">
           <motion.button
             className={`flex items-center space-x-1 px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${

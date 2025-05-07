@@ -133,8 +133,8 @@ const SkillSharingFeed = () => {
       );
       return response;
     } catch (error) {
-      console.error("Error adding comment:", error);
-      toast.error("Failed to add comment");
+      console.error("Error adding Comment:", error);
+      toast.error("Failed to add Comment");
       throw error;
     }
   };
