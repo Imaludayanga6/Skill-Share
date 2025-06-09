@@ -29,7 +29,7 @@
 
 | Home Page | Learning Plan | Skill Post |
 |----------|----------------|------------|
-| ![Home](FRONTEND/src/assets/Homepage.png) | ![Learning Plan](FRONTEND/src/assets/Learning progress.png) | 
+| ![Home](FRONTEND/src/assets/Homepage.png) | ![Learning Plan](FRONTEND/src/assets/Learning-progress.png) | 
 
 > 📝 *Make sure your images are stored in `assets/images/` or update the path accordingly.*
 
